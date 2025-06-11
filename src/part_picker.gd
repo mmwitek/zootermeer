@@ -22,18 +22,18 @@ func _ready() -> void:
 	set_texture(folder_index) # Initialize sprite with first texture if available
 	queue_redraw()
 
-func next() -> void:
-	if files.size() == 0: return
-	folder_index += 1
-	if folder_index >= files.size():
-		folder_index = 0
-	set_texture(folder_index)
-
-func previous() -> void:
+func previous() -> void: # on left button click
 	if files.size() == 0: return
 	folder_index -= 1
 	if folder_index < 0:
 		folder_index = files.size() - 1
+	set_texture(folder_index)
+
+func next() -> void: # on right button click
+	if files.size() == 0: return
+	folder_index += 1
+	if folder_index >= files.size():
+		folder_index = 0
 	set_texture(folder_index)
 
 func set_texture(index: int) -> void:
@@ -52,7 +52,7 @@ func set_texture(index: int) -> void:
 	else: print_debug("CRASH - Texture didn't load: ", file_path)
 	queue_redraw()
 
-# Receives information about body part placement from Godot for easier adjustments
+## Receives information about body part placement from Godot for easier adjustments
 func inherit_reference():
 	if not reference: return # null error handling
 	

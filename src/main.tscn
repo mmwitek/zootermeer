@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://xte4w4bqn4m6"]
+[gd_scene load_steps=12 format=3 uid="uid://xte4w4bqn4m6"]
 
 [ext_resource type="Texture2D" uid="uid://cuxv6qll7ptby" path="res://assets/bg.png" id="1_y7o2o"]
 [ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="2_bhwh5"]
+[ext_resource type="Shader" path="res://src/main.gdshader" id="2_smhhp"]
+[ext_resource type="Script" path="res://src/body.gd" id="3_5bky2"]
 [ext_resource type="PackedScene" uid="uid://dxpu8x5wkkvwo" path="res://src/selector.tscn" id="3_336xr"]
+[ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="4_eth2q"]
 [ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-01.png" id="4_x0ray"]
+[ext_resource type="Script" path="res://src/cookie_manager.gd" id="6_y4qmi"]
 
 [sub_resource type="GDScript" id="GDScript_wrk3t"]
 script/source = "extends Node2D
@@ -26,6 +30,10 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_816t8"]
+shader = ExtResource("2_smhhp")
+shader_parameter/modulate_color = Vector4(1, 1, 1, 1)
+
 [node name="Character Creator" type="Node2D"]
 script = SubResource("GDScript_wrk3t")
 
@@ -35,20 +43,15 @@ scale = Vector2(0.599769, 0.6)
 texture = ExtResource("1_y7o2o")
 metadata/_edit_lock_ = true
 
-[node name="Reference" type="Node2D" parent="."]
+[node name="Body" type="Node2D" parent="."]
+script = SubResource("GDScript_fevef")
 
-[node name="Body" type="Sprite2D" parent="Reference"]
+[node name="Body" type="Sprite2D" parent="Body"]
+material = SubResource("ShaderMaterial_816t8")
 position = Vector2(544, 244)
 scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("2_bhwh5")
-
-[node name="Eyes" type="Sprite2D" parent="Reference"]
-position = Vector2(535, 166)
-scale = Vector2(0.34, 0.34)
-texture = ExtResource("4_x0ray")
-
-[node name="Body" type="Node2D" parent="."]
-script = SubResource("GDScript_fevef")
+script = ExtResource("3_5bky2")
 
 [node name="Eyes" parent="Body" node_paths=PackedStringArray("reference") instance=ExtResource("3_336xr")]
 position = Vector2(543, 440)
@@ -56,10 +59,11 @@ FOLDER = "res://assets/eyes"
 debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
 reference = NodePath("../../Reference/Eyes")
 
-[node name="Mouth" parent="Body" instance=ExtResource("3_336xr")]
+[node name="Mouth" parent="Body" node_paths=PackedStringArray("reference") instance=ExtResource("3_336xr")]
 position = Vector2(541, 482)
 FOLDER = "res://assets/mouth"
 debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
+reference = NodePath("../../Reference/Mouth")
 
 [node name="Color" parent="Body" instance=ExtResource("3_336xr")]
 position = Vector2(865, 468)
@@ -73,16 +77,26 @@ FOLDER = "res://assets/ears"
 position = Vector2(540, 530)
 FOLDER = "res://assets/tails"
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 1155.0
-offset_bottom = 649.0
+[node name="Reference" type="Node2D" parent="."]
+
+[node name="Eyes" type="Sprite2D" parent="Reference"]
+position = Vector2(535, 169)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("4_x0ray")
+
+[node name="Mouth" type="Sprite2D" parent="Reference"]
+position = Vector2(533, 183)
+scale = Vector2(-0.0217284, 0.0217284)
+texture = ExtResource("4_eth2q")
 
 [node name="Create your character" type="RichTextLabel" parent="."]
-offset_left = 410.0
-offset_top = 36.0
-offset_right = 679.0
-offset_bottom = 82.0
+offset_left = 445.0
+offset_top = 35.0
+offset_right = 714.0
+offset_bottom = 81.0
 bbcode_enabled = true
-text = "[font_size=24][b][wave amp=20.0 freq=2 connected=1]Create your character"
+text = "[font_size=24][b][wave amp=20.0 freq=2 connected=1]Create your pal"
 fit_content = true
+
+[node name="Cookie Manager" type="Node" parent="."]
+script = ExtResource("6_y4qmi")
