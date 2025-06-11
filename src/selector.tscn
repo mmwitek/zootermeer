@@ -1,13 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxpu8x5wkkvwo"]
+[gd_scene load_steps=4 format=3 uid="uid://dxpu8x5wkkvwo"]
 
-[ext_resource type="Script" path="res://selector_body.gd" id="1_83c55"]
+[ext_resource type="Script" path="res://src/part_picker.gd" id="1_83c55"]
+[ext_resource type="Script" path="res://src/body_text.gd" id="2_kjp5o"]
+[ext_resource type="Texture2D" uid="uid://cuxv6qll7ptby" path="res://assets/bg.png" id="2_wcsvr"]
 
 [node name="Selector" type="Node2D"]
 script = ExtResource("1_83c55")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -200)
+position = Vector2(-100000, 0)
 scale = Vector2(0.015, 0.015)
+texture = ExtResource("2_wcsvr")
 
 [node name="bPrevious" type="Button" parent="."]
 offset_left = -53.0
@@ -22,9 +25,10 @@ offset_top = -14.0
 offset_right = 21.0
 offset_bottom = 11.0
 bbcode_enabled = true
-text = "Body"
+text = "Selector"
 fit_content = true
 scroll_active = false
+script = ExtResource("2_kjp5o")
 
 [node name="bNext" type="Button" parent="."]
 offset_left = 33.0
@@ -33,5 +37,6 @@ offset_right = 51.0
 offset_bottom = 15.0
 text = ">"
 
+[connection signal="editor_description_changed" from="." to="tBody" method="_on_selector_editor_description_changed"]
 [connection signal="button_up" from="bPrevious" to="." method="previous"]
 [connection signal="button_up" from="bNext" to="." method="next"]
