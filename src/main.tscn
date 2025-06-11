@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cuxv6qll7ptby" path="res://assets/bg.png" id="1_y7o2o"]
 [ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="2_bhwh5"]
 [ext_resource type="PackedScene" uid="uid://dxpu8x5wkkvwo" path="res://src/selector.tscn" id="3_336xr"]
-[ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-02.png" id="4_x0ray"]
+[ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-01.png" id="4_x0ray"]
 
 [sub_resource type="GDScript" id="GDScript_wrk3t"]
 script/source = "extends Node2D
@@ -43,7 +43,7 @@ scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("2_bhwh5")
 
 [node name="Eyes" type="Sprite2D" parent="Reference"]
-position = Vector2(536, 161)
+position = Vector2(535, 166)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("4_x0ray")
 
@@ -53,14 +53,12 @@ script = SubResource("GDScript_fevef")
 [node name="Eyes" parent="Body" node_paths=PackedStringArray("reference") instance=ExtResource("3_336xr")]
 position = Vector2(543, 440)
 FOLDER = "res://assets/eyes"
-anchor = Vector2(548, 124)
 debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
 reference = NodePath("../../Reference/Eyes")
 
 [node name="Mouth" parent="Body" instance=ExtResource("3_336xr")]
 position = Vector2(541, 482)
 FOLDER = "res://assets/mouth"
-anchor = Vector2(548, 144)
 debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
 
 [node name="Color" parent="Body" instance=ExtResource("3_336xr")]

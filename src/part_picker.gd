@@ -5,30 +5,22 @@ extends Node2D
 @onready var sprite: Sprite2D = $Sprite
 
 @export_dir var FOLDER: String = "res://assets/"
-@export var folder_index := 0
-
-#@export_group("Anchor Points")
-@export var anchor : Vector2 = Vector2(-100000,0)
-
-@export_group("Debug")
 @export var debug_color : Color
 @export var reference : Sprite2D
 
 var files : Array
+var folder_index := 0
 
 func _ready() -> void:
 	
 	$tBody.text = name # Sets UI label to parent name in editor
 	inherit_reference()
-	get_folder_contents()
-	filter_files()
-
-	# Initialize sprite with first texture if available
-	set_texture(folder_index)
-		#print(files.size(), " assets loaded from: ",FOLDER,"\n",files, "\n")
-	queue_redraw()
 	
-	$Sprite.global_position = anchor
+	files = get_folder_contents()
+	filter_files()
+	
+	set_texture(folder_index) # Initialize sprite with first texture if available
+	queue_redraw()
 
 func next() -> void:
 	if files.size() == 0: return
@@ -60,10 +52,6 @@ func set_texture(index: int) -> void:
 	else: print_debug("CRASH - Texture didn't load: ", file_path)
 	queue_redraw()
 
-func _draw() -> void:
-	draw_circle(anchor, 16, debug_color, true)
-	
-
 # Receives information about body part placement from Godot for easier adjustments
 func inherit_reference():
 	if not reference: return # null error handling
@@ -79,7 +67,7 @@ func get_folder_contents():
 	if dir == null:
 		print_debug("Could not open ", FOLDER)
 		return
-	files = dir.get_files()
+	return dir.get_files()
 
 # Filter items ending on .png
 func filter_files():
