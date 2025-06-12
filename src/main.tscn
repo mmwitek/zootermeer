@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="4_eth2q"]
 [ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-01.png" id="4_x0ray"]
 [ext_resource type="Script" path="res://src/cookie_manager.gd" id="6_y4qmi"]
-[ext_resource type="PackedScene" uid="uid://brca5x2bu480w" path="res://swatch.tscn" id="10_jibdx"]
+[ext_resource type="PackedScene" uid="uid://brca5x2bu480w" path="res://src/swatch.tscn" id="10_jibdx"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hul0t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7prmf"]
 shader = ExtResource("2_smhhp")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
 
@@ -31,7 +31,7 @@ anchors_preset = 0
 script = ExtResource("2_hv43c")
 
 [node name="Body" type="Sprite2D" parent="Body"]
-material = SubResource("ShaderMaterial_hul0t")
+material = SubResource("ShaderMaterial_7prmf")
 position = Vector2(544, 244)
 scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("2_bhwh5")
@@ -59,6 +59,7 @@ position = Vector2(541, 509)
 FOLDER = "res://assets/tails"
 
 [node name="ButtonCreate" type="Button" parent="Body"]
+layout_mode = 0
 offset_left = 490.0
 offset_top = 596.0
 offset_right = 586.0
@@ -146,7 +147,7 @@ offset_left = 861.0
 offset_top = 328.0
 offset_right = 926.0
 offset_bottom = 393.0
-color = Color(0.141176, 0.341176, 0.360784, 1)
+color = Color(0.913725, 0.341176, 0.360784, 1)
 
 [node name="Swatch8" parent="Swatches" instance=ExtResource("10_jibdx")]
 layout_mode = 2
@@ -158,6 +159,8 @@ color = Color(6.257e-06, 0.783243, 0.722445, 1)
 
 [node name="Cookie Manager" type="Node" parent="."]
 script = ExtResource("6_y4qmi")
+
+[node name="Node" type="Node" parent="."]
 
 [connection signal="texture_changed" from="Body/Body" to="Body/Body" method="_on_color_change"]
 [connection signal="button_up" from="Body/ButtonCreate" to="Body" method="_on_create_button_press"]

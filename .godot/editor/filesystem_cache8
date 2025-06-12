@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749713377
+::res://::1749713955
 Events.gd::GDScript::-1::1749713334::0::1::::<>Node<>::
 export_presets.cfg::TextFile::-1::1749670135::0::1::::<><>::
 swatch.gd::GDScript::-1::1749684707::0::1::::<>Button<>::
@@ -23,14 +23,16 @@ eyes-02.png::CompressedTexture2D::8983457481970403817::1749664883::1749669401::1
 511d8647dbdc06fa3a1ddb6ccf7ccaabc72f1dab.png::CompressedTexture2D::3382957600769103484::1749550464::1749664480::1::::<><>::
 4395a330229a03909465f1bfcac071a9bf6320dc.png::CompressedTexture2D::3069057020912331980::1749550464::1749664480::1::::<><>::
 ::res://assets/tails/::1749650819
-::res://src/::1749713730
+::res://pals/::1749713955
+::res://src/::1749715617
 body.gd::GDScript::-1::1749684600::0::1::::<>Sprite2D<>::
 body_text.gd::GDScript::-1::1749666718::0::1::::<>RichTextLabel<>::
 color_button.gd::GDScript::-1::1749680746::0::1::::<>TextureButton<>::
 color_picker.gd::GDScript::-1::1749680969::0::1::::<>TextureButton<>::
 cookie_manager.gd::GDScript::-1::1749673350::0::1::::<>Node<>::
-main.tscn::PackedScene::1653862437376581363::1749713895::0::1::::<><>::uid://cuxv6qll7ptby::::res://assets/bg.png<>uid://c7rag16ndy1do::::res://assets/body/body.png<>res://src/pal_creator.gd<>res://src/pal_color.gdshader<>res://src/body.gd<>uid://dxpu8x5wkkvwo::::res://src/selector.tscn<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>uid://dqj3xvr2wor2x::::res://assets/eyes/eyes-01.png<>res://src/cookie_manager.gd<>uid://brca5x2bu480w::::res://swatch.tscn
-pal_color.gdshader::Shader::-1::1749713895::0::1::::<><>::
-pal_creator.gd::GDScript::-1::1749713535::0::1::::<>Control<>::
+main.tscn::PackedScene::1653862437376581363::1749715989::0::1::::<><>::res://src/main.gd<>uid://cuxv6qll7ptby::::res://assets/bg.png<>uid://c7rag16ndy1do::::res://assets/body/body.png<>res://src/pal_creator.gd<>res://src/pal_color.gdshader<>res://src/body.gd<>uid://dxpu8x5wkkvwo::::res://src/selector.tscn<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>uid://dqj3xvr2wor2x::::res://assets/eyes/eyes-01.png<>res://src/cookie_manager.gd<>uid://brca5x2bu480w::::res://swatch.tscn
+pal_color.gdshader::Shader::-1::1749715989::0::1::::<><>::
+pal_creator.gd::GDScript::-1::1749715096::0::1::::<>Control<>::
 part_picker.gd::GDScript::-1::1749681423::0::1::::<>Node2D<>::
+main.gd::GDScript::-1::1749715617::0::1::::<>Node2D<>::
 selector.tscn::PackedScene::8805845647513682046::1749666588::0::1::::<><>::res://src/part_picker.gd<>res://src/body_text.gd<>uid://cuxv6qll7ptby::::res://assets/bg.png

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://brca5x2bu480w"]
 
-[ext_resource type="Script" path="res://swatch.gd" id="1_unbiy"]
+[ext_resource type="Script" path="res://src/swatch.gd" id="1_unbiy"]
 
 [node name="Swatch" type="Button"]
 offset_right = 65.0
