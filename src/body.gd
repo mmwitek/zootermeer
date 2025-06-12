@@ -4,7 +4,6 @@ extends Sprite2D
 @export_color_no_alpha var color: Color
 
 func _ready():
-	connect("color_change", update_color)
 	update_color(color)
 
 func _on_swatch_clicked(p_color: Color):

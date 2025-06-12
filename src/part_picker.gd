@@ -12,13 +12,11 @@ var files : Array
 var folder_index := 0
 
 func _ready() -> void:
-	
+	print_debug(name, " loaded")
 	$tBody.text = name # Sets UI label to parent name in editor
 	inherit_reference()
-	
 	files = get_folder_contents()
 	filter_files()
-	
 	set_texture(folder_index) # Initialize sprite with first texture if available
 	queue_redraw()
 
@@ -55,8 +53,7 @@ func set_texture(index: int) -> void:
 ## Receives information about body part placement from Godot for easier adjustments
 func inherit_reference():
 	if not reference: return # null error handling
-	
-	print_debug(reference.global_position, " / ", sprite.global_position)
+	#print_debug(reference.global_position, " / ", sprite.global_position)
 	sprite.global_position = reference.global_position
 	reference.queue_free()
 	sprite.scale = reference.scale

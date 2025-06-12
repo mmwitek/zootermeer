@@ -21,3 +21,21 @@ Events="*res://src/Events.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://assets/body/": "orange",
+"res://assets/drip/": "orange",
+"res://assets/ears/": "orange",
+"res://assets/eyes/": "orange",
+"res://assets/mouth/": "orange",
+"res://assets/tails/": "orange",
+"res://pals/": "yellow",
+"res://src/": "green"
+}
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

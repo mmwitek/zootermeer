@@ -1,0 +1,17 @@
+<!-- HTML Shell that embeds Godot Game into the browser -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zootermeer</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script src="$GODOT_URL"></script>
+        <script>
+            var engine = new Engine($GODOT_CONFIG);
+            engine.startGame();
+        </script>
+    </body>
+</html>

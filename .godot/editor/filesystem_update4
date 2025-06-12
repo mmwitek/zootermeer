@@ -1,4 +1,4 @@
 res://src/main.tscn
 res://src/pal_color.gdshader
-res://src/pal_creator.gd
-res://src/main.gd
+res://src/selector.tscn
+res://src/part_picker.gd
