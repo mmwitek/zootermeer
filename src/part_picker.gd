@@ -61,7 +61,6 @@ func inherit_reference():
 	reference.queue_free()
 	sprite.scale = reference.scale
 
-
 func get_folder_contents():
 	var dir = DirAccess.open(FOLDER)
 	if dir == null:

@@ -1,3 +1,11 @@
 Node
+Control
+Button
+ColorRect
+TextureButton
+TextEdit
+VBoxContainer
+HBoxContainer
+ColorPickerButton
 Node2D
 XRBodyModifier3D

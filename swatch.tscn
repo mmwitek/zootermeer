@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://brca5x2bu480w"]
+
+[ext_resource type="Script" path="res://swatch.gd" id="1_unbiy"]
+
+[node name="Swatch" type="Button"]
+offset_right = 65.0
+offset_bottom = 65.0
+size_flags_horizontal = 6
+toggle_mode = true
+script = ExtResource("1_unbiy")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

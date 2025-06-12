@@ -1,7 +1,17 @@
+@tool
 extends Sprite2D
 
+@export_color_no_alpha var color: Color
+
 func _ready():
+	connect("color_change", update_color)
+	update_color(color)
+
+func _on_swatch_clicked(p_color: Color):
+	update_color(p_color)
+
+func update_color(p_color: Color):
 	var shader_material = ShaderMaterial.new()
-	shader_material.shader = load("res://path_to_your_shader.gdshader")
-	shader_material.set_shader_parameter("modulate_color", Color(1, 0, 0, 1)) # Red color
+	shader_material.shader = load("res://src/pal_color.gdshader")
+	shader_material.set_shader_parameter("modulate_color", p_color)
 	self.material = shader_material
