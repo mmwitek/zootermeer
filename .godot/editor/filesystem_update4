@@ -1,0 +1,6 @@
+res://src/main.tscn
+res://src/pal_color.gdshader
+res://src/scene_creator.gd
+res://src/websocket_manager.gd
+res://src/resource_list.gd
+res://src/part_picker.gd

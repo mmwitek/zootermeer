@@ -1,3 +1,4 @@
+Node2D
 Camera2D
 Node
 Control
@@ -8,5 +9,4 @@ TextEdit
 VBoxContainer
 HBoxContainer
 ColorPickerButton
-Node2D
 XRBodyModifier3D

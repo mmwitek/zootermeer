@@ -1,6 +1,7 @@
 extends Node
 
 var socket = WebSocketPeer.new()
+@export var is_enabled := true
 
 func _ready():
 	var IP_ADDRESS := "wss://zootermeer.netlify.app:8080"
@@ -9,6 +10,7 @@ func _ready():
 	
 	if state == WebSocketPeer.STATE_CONNECTING:
 		print_debug("Connecting to ", IP_ADDRESS)
+	set_process(is_enabled)
 
 ## Boilerplate WebSocket code from Godot docs
 #  https://docs.godotengine.org/en/stable/classes/class_websocketpeer.html
