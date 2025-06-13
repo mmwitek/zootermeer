@@ -1,7 +1,7 @@
 extends Node
 
 var socket = WebSocketPeer.new()
-@export var is_enabled := true
+@export var is_enabled := false
 
 func _ready():
 	var IP_ADDRESS := "wss://zootermeer.netlify.app:8080"

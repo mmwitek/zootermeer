@@ -1,76 +1,27 @@
-[gd_scene load_steps=15 format=3 uid="uid://xte4w4bqn4m6"]
+[gd_scene load_steps=7 format=3 uid="uid://xte4w4bqn4m6"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1_n52dl"]
-[ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="2_bhwh5"]
-[ext_resource type="Script" path="res://src/pal_creator.gd" id="2_hv43c"]
-[ext_resource type="Shader" path="res://src/pal_color.gdshader" id="2_smhhp"]
-[ext_resource type="Script" path="res://src/body.gd" id="3_5bky2"]
-[ext_resource type="PackedScene" uid="uid://dxpu8x5wkkvwo" path="res://src/selector.tscn" id="3_336xr"]
+[ext_resource type="PackedScene" uid="uid://r1lry3sl20ni" path="res://src/pal_creator.tscn" id="2_d7j6n"]
 [ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="4_eth2q"]
-[ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-01.png" id="4_x0ray"]
-[ext_resource type="Script" path="res://src/cookie_manager.gd" id="6_y4qmi"]
 [ext_resource type="Script" path="res://src/resource_list.gd" id="7_pmr7e"]
+[ext_resource type="Texture2D" uid="uid://bdo2e4pi6jtm" path="res://assets/eyes/Eyes 4.png" id="8_ks7ni"]
 [ext_resource type="PackedScene" uid="uid://brca5x2bu480w" path="res://src/swatch.tscn" id="10_jibdx"]
-[ext_resource type="Script" path="res://src/scene_creator.gd" id="12_o8b2k"]
-[ext_resource type="Script" path="res://src/websocket_manager.gd" id="12_yix0f"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jobu1"]
-shader = ExtResource("2_smhhp")
-shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
-
-[node name="Character Creator" type="Node2D"]
+[node name="Character_Creator" type="Node2D"]
 script = ExtResource("1_n52dl")
 
-[node name="Body" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("2_hv43c")
-metadata/_edit_use_anchors_ = true
-
-[node name="Body" type="Sprite2D" parent="Body"]
-material = SubResource("ShaderMaterial_jobu1")
-position = Vector2(544, 244)
-scale = Vector2(0.249376, 0.249376)
-texture = ExtResource("2_bhwh5")
-script = ExtResource("3_5bky2")
-color = Color(0, 0.62091, 0.759736, 1)
-
-[node name="Eyes" parent="Body" node_paths=PackedStringArray("reference") instance=ExtResource("3_336xr")]
-position = Vector2(544, 419)
-FOLDER = "res://assets/eyes"
-debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
-reference = NodePath("../../Reference/Eyes")
-
-[node name="Mouth" parent="Body" node_paths=PackedStringArray("reference") instance=ExtResource("3_336xr")]
-position = Vector2(542, 461)
-FOLDER = "res://assets/mouth"
-debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
-reference = NodePath("../../Reference/Mouth")
-
-[node name="Ears" parent="Body" instance=ExtResource("3_336xr")]
-position = Vector2(542, 559)
-FOLDER = "res://assets/ears"
-
-[node name="Tail" parent="Body" instance=ExtResource("3_336xr")]
-position = Vector2(541, 509)
-FOLDER = "res://assets/tails"
-
-[node name="ButtonCreate" type="Button" parent="Body"]
-layout_mode = 0
-offset_left = 490.0
-offset_top = 596.0
-offset_right = 586.0
-offset_bottom = 627.0
-text = "Create"
+[node name="Pal_Creator" parent="." instance=ExtResource("2_d7j6n")]
+position = Vector2(531, 152)
 
 [node name="Reference" type="Node2D" parent="."]
 script = ExtResource("7_pmr7e")
 eye_textures = Array[Texture2D]([null])
+metadata/_edit_lock_ = true
 
 [node name="Eyes" type="Sprite2D" parent="Reference"]
 position = Vector2(534, 163)
 scale = Vector2(0.34, 0.34)
-texture = ExtResource("4_x0ray")
+texture = ExtResource("8_ks7ni")
 
 [node name="Mouth" type="Sprite2D" parent="Reference"]
 position = Vector2(533, 183)
@@ -157,16 +108,3 @@ offset_top = 328.0
 offset_right = 998.0
 offset_bottom = 393.0
 color = Color(6.257e-06, 0.783243, 0.722445, 1)
-
-[node name="Cookie Manager" type="Node" parent="."]
-script = ExtResource("6_y4qmi")
-
-[node name="Websocket Manager" type="Node" parent="."]
-script = ExtResource("12_yix0f")
-is_enabled = false
-
-[node name="Scene Creator" type="Node2D" parent="."]
-script = ExtResource("12_o8b2k")
-
-[connection signal="texture_changed" from="Body/Body" to="Body/Body" method="_on_color_change"]
-[connection signal="button_up" from="Body/ButtonCreate" to="Body" method="_on_create_button_press"]

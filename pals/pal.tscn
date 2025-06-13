@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://src/create_pal.gd" id="1_lvfo5"]
+[ext_resource type="Shader" path="res://src/pal_color.gdshader" id="2_sd2oy"]
+[ext_resource type="Texture2D" path="res://assets/body/body.png" id="3_353rv"]
+[ext_resource type="Script" path="res://src/body.gd" id="4_n43x5"]
+[ext_resource type="PackedScene" path="res://src/selector.tscn" id="5_pjubx"]
+[ext_resource type="Script" path="res://src/part_picker.gd" id="6_hyoci"]
+[ext_resource type="Texture2D" path="res://assets/eyes/Eyes 4.png" id="7_16u3g"]
+[ext_resource type="Script" path="res://src/body_text.gd" id="8_w1dvg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6wvq"]
+shader = ExtResource("2_sd2oy")
+shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
+
+[node name="Pal_Creator" type="Node2D"]
+position = Vector2(531, 152)
+script = ExtResource("1_lvfo5")
+PAL_FOLDER = "res://pals/pal.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="Body" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q6wvq")
+position = Vector2(10, 97)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_353rv")
+script = ExtResource("4_n43x5")
+color = Color(0, 0.62091, 0.759736, 1)
+
+[node name="Eyes" parent="." instance=ExtResource("5_pjubx")]
+position = Vector2(9, 284)
+script = ExtResource("6_hyoci")
+FOLDER = "res://assets/eyes"
+debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
+metadata/_edit_group_ = true
+
+[node name="Sprite" parent="Eyes" index="0"]
+position = Vector2(-100000, 0)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("7_16u3g")
+
+[node name="bPrevious" parent="Eyes" index="1"]
+offset_left = -53.0
+offset_top = -17.0
+offset_right = -35.0
+offset_bottom = 14.0
+text = "<"
+
+[node name="tBody" parent="Eyes" index="2"]
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 21.0
+offset_bottom = 11.0
+bbcode_enabled = true
+text = "Eyes"
+fit_content = true
+scroll_active = false
+script = ExtResource("8_w1dvg")
+
+[node name="bNext" parent="Eyes" index="3"]
+offset_left = 33.0
+offset_top = -16.0
+offset_right = 51.0
+offset_bottom = 15.0
+text = ">"
+
+[node name="Mouth" type="Node2D" parent="." instance=ExtResource("5_pjubx")]
+position = Vector2(9, 343)
+script = ExtResource("6_hyoci")
+FOLDER = "res://assets/mouth"
+debug_color = Color(0.502396, 0.00205008, 0.74597, 1)
+
+[node name="Ears" type="Node2D" parent="." instance=ExtResource("5_pjubx")]
+position = Vector2(10, 451)
+script = ExtResource("6_hyoci")
+FOLDER = "res://assets/ears"
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Tail" type="Node2D" parent="." instance=ExtResource("5_pjubx")]
+position = Vector2(9, 396)
+script = ExtResource("6_hyoci")
+FOLDER = "res://assets/tails"
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Button_Create" type="Button" parent="."]
+offset_left = 253.0
+offset_top = 266.0
+offset_right = 380.0
+offset_bottom = 307.0
+text = "Create"
+
+[connection signal="texture_changed" from="Body" to="Body" method="_on_color_change"]
+[connection signal="editor_description_changed" from="Eyes" to="Eyes/tBody" method="_on_selector_editor_description_changed"]
+[connection signal="button_up" from="Eyes/bPrevious" to="Eyes" method="previous"]
+[connection signal="button_up" from="Eyes/bNext" to="Eyes" method="next"]
+[connection signal="editor_description_changed" from="Mouth" to="Mouth/tBody" method="_on_selector_editor_description_changed"]
+[connection signal="editor_description_changed" from="Ears" to="Ears/tBody" method="_on_selector_editor_description_changed"]
+[connection signal="editor_description_changed" from="Tail" to="Tail/tBody" method="_on_selector_editor_description_changed"]
+[connection signal="button_up" from="Button_Create" to="." method="_on_create_button_press"]
+
+[editable path="Eyes"]

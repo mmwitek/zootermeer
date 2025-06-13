@@ -1,9 +1,11 @@
+ColorRect
 Node2D
-Camera2D
+Bone2D
+Skeleton2D
 Node
+Camera2D
 Control
 Button
-ColorRect
 TextureButton
 TextEdit
 VBoxContainer
