@@ -23,6 +23,7 @@ script = ExtResource("1_n52dl")
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("2_hv43c")
+metadata/_edit_use_anchors_ = true
 
 [node name="Body" type="Sprite2D" parent="Body"]
 material = SubResource("ShaderMaterial_4htiu")
@@ -72,20 +73,22 @@ position = Vector2(533, 183)
 scale = Vector2(-0.0217284, 0.0217284)
 texture = ExtResource("4_eth2q")
 
-[node name="Create your character" type="RichTextLabel" parent="."]
+[node name="Text" type="RichTextLabel" parent="."]
 offset_left = 445.0
 offset_top = 35.0
 offset_right = 714.0
 offset_bottom = 81.0
 bbcode_enabled = true
-text = "[font_size=24][b][wave amp=20.0 freq=2 connected=1]Create your pal"
+text = "[font_size=24][b][wave amp=40.0 freq=2 connected=1]Create your pal"
 fit_content = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Swatches" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Swatch1" parent="Swatches" instance=ExtResource("10_jibdx")]
 layout_mode = 2

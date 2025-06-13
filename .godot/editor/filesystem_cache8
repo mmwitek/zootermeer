@@ -1,6 +1,6 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1749733743
-export_presets.cfg::TextFile::-1::1749733626::0::1::::<><>::
+::res://::1749797377
+export_presets.cfg::TextFile::-1::1749738441::0::1::::<><>::
 ::res://assets/::1749728696
 ::res://assets/body/::1749664481
 body.png::CompressedTexture2D::7053990914477367596::1749650082::1749664478::1::::<><>::
@@ -20,7 +20,7 @@ eyes-02.png::CompressedTexture2D::8983457481970403817::1749664883::1749669401::1
 4395a330229a03909465f1bfcac071a9bf6320dc.png::CompressedTexture2D::3069057020912331980::1749550464::1749664480::1::::<><>::
 ::res://assets/tails/::1749650819
 ::res://pals/::1749713955
-::res://src/::1749733739
+::res://src/::1749739625
 body.gd::GDScript::-1::1749732462::0::1::::<>Sprite2D<>::
 body_text.gd::GDScript::-1::1749666718::0::1::::<>RichTextLabel<>::
 color_button.gd::GDScript::-1::1749680746::0::1::::<>TextureButton<>::
@@ -28,11 +28,11 @@ color_picker.gd::GDScript::-1::1749680969::0::1::::<>TextureButton<>::
 cookie_manager.gd::GDScript::-1::1749673350::0::1::::<>Node<>::
 Events.gd::GDScript::-1::1749713334::0::1::::<>Node<>::
 main.gd::GDScript::-1::1749716189::0::1::::<>Node2D<>::
-main.tscn::PackedScene::1653862437376581363::1749733739::0::1::::<><>::res://src/main.gd<>uid://c7rag16ndy1do::::res://assets/body/body.png<>res://src/pal_creator.gd<>res://src/pal_color.gdshader<>res://src/body.gd<>uid://dxpu8x5wkkvwo::::res://src/selector.tscn<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>uid://dqj3xvr2wor2x::::res://assets/eyes/eyes-01.png<>res://src/cookie_manager.gd<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/websocket_manager.gd
-pal_color.gdshader::Shader::-1::1749733739::0::1::::<><>::
+main.tscn::PackedScene::1653862437376581363::1749738727::0::1::::<><>::res://src/main.gd<>uid://c7rag16ndy1do::::res://assets/body/body.png<>res://src/pal_creator.gd<>res://src/pal_color.gdshader<>res://src/body.gd<>uid://dxpu8x5wkkvwo::::res://src/selector.tscn<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>uid://dqj3xvr2wor2x::::res://assets/eyes/eyes-01.png<>res://src/cookie_manager.gd<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/websocket_manager.gd
+pal_color.gdshader::Shader::-1::1749739625::0::1::::<><>::
 pal_creator.gd::GDScript::-1::1749715096::0::1::::<>Control<>::
-part_picker.gd::GDScript::-1::1749727993::0::1::::<>Node2D<>::
-selector.tscn::PackedScene::8805845647513682046::1749733739::0::1::::<><>::res://src/part_picker.gd<>res://src/body_text.gd
+part_picker.gd::GDScript::-1::1749737544::0::1::::<>Node2D<>::
+selector.tscn::PackedScene::8805845647513682046::1749738727::0::1::::<><>::res://src/part_picker.gd<>res://src/body_text.gd
 swatch.gd::GDScript::-1::1749684707::0::1::::<>Button<>::
 swatch.tscn::PackedScene::3583814604685031540::1749715989::0::1::::<><>::res://src/swatch.gd
 websocket_manager.gd::GDScript::-1::1749725618::0::1::::<>Node<>::

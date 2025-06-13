@@ -12,6 +12,7 @@ var files : Array
 var folder_index := 0
 
 func _ready() -> void:
+	preload("res://assets/eyes/eyes-02.png")
 	print_debug(name, " loaded")
 	$tBody.text = name # Sets UI label to parent name in editor
 	inherit_reference()
