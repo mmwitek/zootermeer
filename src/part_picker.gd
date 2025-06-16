@@ -1,4 +1,3 @@
-class_name Part_Picker
 extends Node2D
 
 @onready var b_previous: Button = $bPrevious
@@ -13,11 +12,12 @@ var files : Array
 var folder_index := 0
 
 func _ready() -> void:
+	preload("res://assets/eyes/eyes-02.png")
+	print_debug(name, " loaded")
 	$tBody.text = name # Sets UI label to parent name in editor
-	
 	inherit_reference()
 	files = get_folder_contents()
-	
+	if not files: return
 	filter_files()
 	set_texture(folder_index) # Initialize sprite with first texture if available
 	queue_redraw()
@@ -30,9 +30,7 @@ func previous() -> void: # on left button click
 	set_texture(folder_index)
 
 func next() -> void: # on right button click
-	if files.size() == 0:
-		print("no other files")
-		return
+	if files.size() == 0: return
 	folder_index += 1
 	if folder_index >= files.size():
 		folder_index = 0
@@ -51,9 +49,7 @@ func set_texture(index: int) -> void:
 	
 	# errors!
 	if char_tex: sprite.texture = char_tex
-	else:
-		#print_debug("CRASH - Texture didn't load: ", file_path)
-		pass
+	else: print_debug("CRASH - Texture didn't load: ", file_path)
 	queue_redraw()
 
 ## Receives information about body part placement from Godot for easier adjustments
@@ -69,7 +65,6 @@ func get_folder_contents():
 	if dir == null:
 		print_debug("Could not open ", FOLDER)
 		return
-	print(dir.get_files())
 	return dir.get_files()
 
 # Filter items ending on .png

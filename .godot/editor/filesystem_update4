@@ -1,11 +1,3 @@
-res://src/create_pal.gd
-res://src/pal_color.gdshader
-res://src/scene_creator.gd
 res://src/main.tscn
-res://src/websocket_manager.gd
-res://pals/1238.tscn
-res://pals/4652.tscn
-res://src/part_picker.gd
-res://src/selector.tscn
-res://pals/pal.tscn
-res://src/pal_creator.tscn
+res://src/pal_color.gdshader
+res://src/pal_creator.gd

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 res://src/main.tscn::2a8167e08ebc44cc87280103407bfd6a::1749800027::res://.godot/exported/133200997/export-dbe59258b6e7c5860bca2a5bbd0223c3-main.scn
 res://src/selector.tscn::da185a2b2a3cf38ff68aaeba9681292d::1749738727::res://.godot/exported/133200997/export-8821ce5befc63a64676fe1f47d179705-selector.scn
+=======
+res://src/main.tscn::5a08a0feeea6d911f4d10d95b482442f::1749738093::res://.godot/exported/133200997/export-dbe59258b6e7c5860bca2a5bbd0223c3-main.scn
+res://src/selector.tscn::da185a2b2a3cf38ff68aaeba9681292d::1749738093::res://.godot/exported/133200997/export-8821ce5befc63a64676fe1f47d179705-selector.scn
+>>>>>>> parent of 95eb82b (pre-rewrite commit)
 res://src/swatch.tscn::b09528ced69657151e0f83af0bbb2c6b::1749715989::res://.godot/exported/133200997/export-a503fd5857abaa119ba12be1e18ade56-swatch.scn

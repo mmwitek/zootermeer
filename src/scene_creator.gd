@@ -1,9 +1,14 @@
 extends Node2D # script to instance pngs into scenes
 
-@export var Reference : Node2D
+const SELECTOR = preload("res://src/selector.tscn")
 
-func _on_create_pressed():
-	var packed_scene = PackedScene.new()
-	var ID := randi_range(0, 10000)
-	packed_scene.pack(Reference)
-	print_debug(packed_scene)
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var instanced_scene = SELECTOR.instantiate()
+	add_child(instanced_scene)
+	instanced_scene.global_position = Vector2(200,200)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

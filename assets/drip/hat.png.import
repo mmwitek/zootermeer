@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do4sfvr2v8e6r"
-path="res://.godot/imported/Eyes 7.png-ba89a42d8b5394546e6af21633e7e3aa.ctex"
+uid="uid://xr812walysoq"
+path="res://.godot/imported/hat.png-f4e81e3798f82ff1384dcd33e61ec602.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/eyes/Eyes 7.png"
-dest_files=["res://.godot/imported/Eyes 7.png-ba89a42d8b5394546e6af21633e7e3aa.ctex"]
+source_file="res://assets/drip/hat.png"
+dest_files=["res://.godot/imported/hat.png-f4e81e3798f82ff1384dcd33e61ec602.ctex"]
 
 [params]
 
