@@ -38,6 +38,7 @@ func next() -> void: # on right button click
 
 func set_texture(index: int) -> void:
 	# Error Handling
+	print_debug(files)
 	if not files: print("ERROR: No assets in ",FOLDER); return
 	if index < 0 or index >= files.size(): 
 		push_error("CRASH - Index out of bounds: ", index); return
@@ -45,7 +46,6 @@ func set_texture(index: int) -> void:
 	# Set texture
 	var file_path = FOLDER + "/" + files[index]
 	var char_tex = load(file_path)
-	print_debug(file_path)
 	
 	sprite.texture = char_tex
 	queue_redraw()

@@ -9,3 +9,7 @@ res://src/pal_creator.tscn
 res://src/pal_loader.gd
 res://src/part_picker.gd
 res://src/camera.gd
+res://src/pal_template.tscn
+res://src/resource_list.gd
+res://src/eyes.gd
+res://src/body.gd

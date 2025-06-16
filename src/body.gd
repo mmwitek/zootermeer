@@ -1,4 +1,3 @@
-@tool
 extends Sprite2D
 
 @export_color_no_alpha var color: Color
@@ -13,4 +12,4 @@ func update_color(p_color: Color):
 	var shader_material = ShaderMaterial.new()
 	shader_material.shader = load("res://src/pal_color.gdshader")
 	shader_material.set_shader_parameter("modulate_color", p_color)
-	self.material = shader_material
+	material = shader_material
