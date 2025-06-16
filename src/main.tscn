@@ -1,16 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://xte4w4bqn4m6"]
+[gd_scene load_steps=9 format=3 uid="uid://xte4w4bqn4m6"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1_n52dl"]
 [ext_resource type="PackedScene" uid="uid://cci0q77xc53ia" path="res://src/pal_creator.tscn" id="2_habt4"]
+[ext_resource type="Shader" path="res://src/pal_color.gdshader" id="2_smhhp"]
 [ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="4_eth2q"]
 [ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-01.png" id="4_x0ray"]
 [ext_resource type="Script" path="res://src/resource_list.gd" id="7_pmr7e"]
 [ext_resource type="PackedScene" uid="uid://brca5x2bu480w" path="res://src/swatch.tscn" id="10_jibdx"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p5d3s"]
+shader = ExtResource("2_smhhp")
+shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
+
 [node name="Character Creator" type="Node2D"]
 script = ExtResource("1_n52dl")
 
 [node name="Pal_Creator" parent="." instance=ExtResource("2_habt4")]
+
+[node name="Body" parent="Pal_Creator" index="0"]
+material = SubResource("ShaderMaterial_p5d3s")
+
+[node name="Eyes" parent="Pal_Creator" index="2" node_paths=PackedStringArray("reference")]
+reference = NodePath("../../Reference/Eyes")
 
 [node name="Reference" type="Node2D" parent="."]
 script = ExtResource("7_pmr7e")
@@ -106,3 +117,5 @@ offset_top = 328.0
 offset_right = 998.0
 offset_bottom = 393.0
 color = Color(6.257e-06, 0.783243, 0.722445, 1)
+
+[editable path="Pal_Creator"]

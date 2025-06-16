@@ -7,3 +7,5 @@ res://src/selector.tscn
 res://src/playground.tscn
 res://src/pal_creator.tscn
 res://src/pal_loader.gd
+res://src/part_picker.gd
+res://src/camera.gd

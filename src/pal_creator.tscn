@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://src/body.gd" id="4_66yav"]
 [ext_resource type="PackedScene" uid="uid://dxpu8x5wkkvwo" path="res://src/selector.tscn" id="5_gvsv3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d3y2m"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lokhv"]
 shader = ExtResource("2_jpqny")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
 
@@ -15,7 +15,7 @@ script = ExtResource("1_hdknr")
 metadata/_edit_use_anchors_ = true
 
 [node name="Body" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_d3y2m")
+material = SubResource("ShaderMaterial_lokhv")
 position = Vector2(544, 244)
 scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("3_mw1er")

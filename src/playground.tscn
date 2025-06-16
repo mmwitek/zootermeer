@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dw3b7yuqrqc6v"]
+[gd_scene load_steps=3 format=3 uid="uid://dw3b7yuqrqc6v"]
 
 [ext_resource type="Script" path="res://src/pal_loader.gd" id="1_l47au"]
+[ext_resource type="Script" path="res://src/camera.gd" id="2_4ic1i"]
 
 [node name="Playground" type="Node2D"]
 
-[node name="Node" type="Node" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -5575.0
+offset_top = -5801.0
+offset_right = 6709.0
+offset_bottom = 6483.0
+
+[node name="Pals" type="Node2D" parent="."]
 script = ExtResource("1_l47au")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("2_4ic1i")
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 397.0
+offset_top = 26.0
+offset_right = 736.0
+offset_bottom = 93.0
+bbcode_enabled = true
+text = "[b][font_size=48][color=black]PLAYGROUND"
+fit_content = true

@@ -8,11 +8,10 @@ extends Node2D
 @export var debug_color : Color
 @export var reference : Sprite2D
 
-var files : Array
 var folder_index := 0
+var files : Array
 
 func _ready() -> void:
-	preload("res://assets/eyes/eyes-02.png")
 	print_debug(name, " loaded")
 	$tBody.text = name # Sets UI label to parent name in editor
 	inherit_reference()
@@ -23,7 +22,8 @@ func _ready() -> void:
 	queue_redraw()
 
 func previous() -> void: # on left button click
-	if files.size() == 0: return
+	if files.size() == 0:
+		return
 	folder_index -= 1
 	if folder_index < 0:
 		folder_index = files.size() - 1
@@ -45,12 +45,12 @@ func set_texture(index: int) -> void:
 	# Set texture
 	var file_path = FOLDER + "/" + files[index]
 	var char_tex = load(file_path)
-	# print_debug(files[index], " loaded successfully")
+	print_debug(file_path)
 	
-	# errors!
-	if char_tex: sprite.texture = char_tex
-	else: print_debug("CRASH - Texture didn't load: ", file_path)
+	sprite.texture = char_tex
 	queue_redraw()
+	if not char_tex: print_debug("CRASH - Texture didn't load: ", file_path) # null error handlibn
+	
 
 ## Receives information about body part placement from Godot for easier adjustments
 func inherit_reference():
