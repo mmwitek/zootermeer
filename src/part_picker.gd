@@ -6,7 +6,7 @@ extends Node2D
 
 @export_dir var FOLDER: String = "res://assets/"
 @export var debug_color : Color
-@export var reference : Sprite2D
+@export var reference : Pal_Picker_Element
 
 var folder_index := 0
 var files : Array
@@ -38,8 +38,8 @@ func next() -> void: # on right button click
 
 func set_texture(index: int) -> void:
 	# Error Handling
-	print_debug(files)
 	if not files: print("ERROR: No assets in ",FOLDER); return
+	print_debug(files)
 	if index < 0 or index >= files.size(): 
 		push_error("CRASH - Index out of bounds: ", index); return
 	

@@ -1,3 +1,4 @@
+Control
 Pal_Picker_Element
 Camera2D
 ColorRect
@@ -6,7 +7,6 @@ Node2D
 Node
 Bone2D
 Skeleton2D
-Control
 Button
 TextureButton
 TextEdit

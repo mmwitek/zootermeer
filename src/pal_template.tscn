@@ -50,12 +50,14 @@ script = ExtResource("6_sjftw")
 FOLDER = "res://assets/mouth"
 
 [node name="Drip" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(533, 183)
 scale = Vector2(-0.0217284, 0.0217284)
 texture = ExtResource("3_878gs")
 script = ExtResource("6_sjftw")
 
 [node name="Tail" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(533, 183)
 scale = Vector2(-0.0217284, 0.0217284)
 texture = ExtResource("3_878gs")

@@ -14,3 +14,4 @@ res://src/resource_list.gd
 res://src/eyes.gd
 res://src/body.gd
 res://src/pal_component.gd
+res://src/selector.gd

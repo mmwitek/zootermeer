@@ -11,12 +11,12 @@ offset_top = -5801.0
 offset_right = 6709.0
 offset_bottom = 6483.0
 
-[node name="Pals" type="Node2D" parent="."]
-script = ExtResource("1_l47au")
-
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(576, 324)
 script = ExtResource("2_4ic1i")
+
+[node name="Pal_Manager" type="Node2D" parent="."]
+script = ExtResource("1_l47au")
 
 [node name="Title" type="RichTextLabel" parent="."]
 offset_left = 397.0
