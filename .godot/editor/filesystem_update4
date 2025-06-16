@@ -13,3 +13,4 @@ res://src/pal_template.tscn
 res://src/resource_list.gd
 res://src/eyes.gd
 res://src/body.gd
+res://src/pal_component.gd

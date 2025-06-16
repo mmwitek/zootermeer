@@ -14,8 +14,8 @@ func _ready() -> void:
 		pal_scene,
 		Color.BLUE_VIOLET,
 		0, # head
-		0, # eyes
-		0, # mouth
+		1, # eyes
+		2, # mouth
 		0, # drip
 		0  # tail
 		)
@@ -32,11 +32,11 @@ func load_pal(load_path: String):
 # sets textures and sprites for loaded pal
 func set_pal_parameters(pal: Node2D, color: Color, t_head: int, t_eyes: int, t_mouth: int, t_drip: int, t_tail: int):
 	pal.get_node("Body").update_color(color)
-	#pal.get_node("Head").set_texture(t_head)
+	#pal.get_node("Head").put_texture(t_head)
 	pal_scene.get_node("Eyes").put_texture(t_eyes)
-	#pal.get_node("Mouth").set_texture(t_mouth)
-	#pal.get_node("Drip").set_texture(t_drip)
-	#pal.get_node("Tail").set_texture(t_tail)
+	pal_scene.get_node("Mouth").put_texture(t_mouth) # TODO: Figure out why its overlapping here
+	#pal.get_node("Drip").put_texture(t_drip)
+	#pal.get_node("Tail").put_texture(t_tail)
 	return
 
 func load_all_pals():
