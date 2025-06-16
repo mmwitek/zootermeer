@@ -1,3 +1,9 @@
 res://src/main.tscn
 res://src/pal_color.gdshader
 res://src/pal_creator.gd
+res://playground.tscn
+res://pal_loader.gd
+res://src/selector.tscn
+res://src/playground.tscn
+res://src/pal_creator.tscn
+res://src/pal_loader.gd
