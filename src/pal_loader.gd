@@ -4,18 +4,19 @@ var PAL = "res://pals/pal-41536.json"
 var FOLDER: String = "res://assets/"
 var scene = preload("res://src/pal_template.tscn")
 
-var pal_scene
+
 
 func _ready() -> void:
 	add_pal_from_json(PAL)
 
 func add_pal_from_json(json_string: String):
 	var pal_values = load_json_file(PAL)
-	pal_scene = scene.instantiate()
-	add_child(pal_scene)
+	var pal_node : Node2D = scene.instantiate()
 	print_debug(pal_values["param_body"])
+	add_child(pal_node)
+	pal_node.global_position = Vector2(500,500)
 	set_pal_parameters(
-		pal_scene, # referenced scene
+		pal_node, # referenced scene
 		Color.ORANGE_RED, #pal_values["param_body"], # body color # TODO: Figure out why the color isn't saved, exporting to col gives a black value in RGB
 		0, # head
 		pal_values["param_eyes"], # eyes

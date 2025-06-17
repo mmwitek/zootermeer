@@ -1,9 +1,9 @@
+Timer
 NavigationRegion2D
 CollisionShape2D
 CharacterBody2D
 NavigationAgent2D
 Node
-Timer
 VBoxContainer
 HBoxContainer
 Button
@@ -12,4 +12,3 @@ ColorRect
 Node2D
 Pal_Picker_Element
 Camera2D
-RichTextLabel

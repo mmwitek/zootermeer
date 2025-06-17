@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://mbwmneovf161"]
+[gd_scene load_steps=10 format=3 uid="uid://mbwmneovf161"]
 
 [ext_resource type="Script" path="res://src/pal_controller.gd" id="1_7lk6v"]
-[ext_resource type="Texture2D" path="res://assets/eyes/eyes-01.png" id="2_3soap"]
+[ext_resource type="Texture2D" uid="uid://uhx6m5yhqq8r" path="res://assets/eyes/Eyes 1.png" id="2_3soap"]
 [ext_resource type="Shader" path="res://src/pal_color.gdshader" id="2_7fcxe"]
 [ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="3_7la7e"]
 [ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="3_878gs"]
@@ -12,26 +12,29 @@
 shader = ExtResource("2_7fcxe")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qd66i"]
+radius = 165.012
+
 [node name="Pal_Template" type="CharacterBody2D"]
 script = ExtResource("1_7lk6v")
 
 [node name="Body" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_03ljg")
-position = Vector2(604, 265)
+position = Vector2(-5.00034, 0.999664)
 scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("3_7la7e")
 script = ExtResource("4_rmurh")
 color = Color(0, 0.62091, 0.759736, 1)
 
 [node name="Eyes" type="Sprite2D" parent="."]
-position = Vector2(594, 184)
+position = Vector2(-15.0003, -80.0003)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("2_3soap")
 script = ExtResource("6_sjftw")
 FOLDER = "res://assets/eyes"
 
 [node name="Mouth" type="Sprite2D" parent="."]
-position = Vector2(593, 204)
+position = Vector2(-16.0003, -60.0003)
 rotation = -3.14159
 scale = Vector2(0.0217284, -0.0217284)
 texture = ExtResource("3_878gs")
@@ -57,11 +60,16 @@ script = ExtResource("6_sjftw")
 [node name="Timers" type="Node" parent="."]
 
 [node name="Cooldown_Navigation" type="Timer" parent="Timers"]
-wait_time = 0.5
+wait_time = 10.0
 autostart = true
+
+[node name="Cooldown_Interaction" type="Timer" parent="Timers"]
 
 [node name="NavigationAgent" type="NavigationAgent2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.000396729, -0.000366211)
+shape = SubResource("CircleShape2D_qd66i")
 
 [connection signal="timeout" from="Timers/Cooldown_Navigation" to="." method="_on_timer_timeout"]
+[connection signal="target_reached" from="NavigationAgent" to="." method="_destination_reached"]

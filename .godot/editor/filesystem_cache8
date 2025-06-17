@@ -1,6 +1,7 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1750142785
+::res://::1750197347
 export_presets.cfg::TextFile::-1::1749799899::0::1::::<><>::
+icon.png::CompressedTexture2D::4173421636637488431::1750197347::1750197348::1::::<><>::
 ::res://assets/::1749799899
 ::res://assets/body/::1749823423
 body.png::CompressedTexture2D::7053990914477367596::1749799899::1749823420::1::::<><>::
@@ -10,7 +11,7 @@ platypus.png::CompressedTexture2D::8184791424909760006::1749799899::1749823420::
 shrimp.png::CompressedTexture2D::2626017216620989268::1749799899::1749823423::1::::<><>::
 ::res://assets/drip/::1749823431
 hat.png::CompressedTexture2D::1651489369028396964::1749799899::1749823431::1::::<><>::
-::res://assets/eyes/::1750149756
+::res://assets/eyes/::1750149759
 Eyes 1.png::CompressedTexture2D::1419680045208533795::1749804450::1750149759::1::::<><>::
 Eyes 2.png::CompressedTexture2D::4212349918207649575::1749651672::1750149759::1::::<><>::
 Eyes 3.png::CompressedTexture2D::2992642936902735618::1749733214::1750149759::1::::<><>::
@@ -23,29 +24,34 @@ Eyes 8.png::CompressedTexture2D::4989051639214430112::1749804282::1750149759::1:
 1fdc74f737b34d88ecacc7483268721f6b903879.png::CompressedTexture2D::5900043263191132104::1749799899::1749823422::1::::<><>::
 511d8647dbdc06fa3a1ddb6ccf7ccaabc72f1dab.png::CompressedTexture2D::3382957600769103484::1749799899::1749823422::1::::<><>::
 4395a330229a03909465f1bfcac071a9bf6320dc.png::CompressedTexture2D::3069057020912331980::1749799899::1749823420::1::::<><>::
-::res://pals/::1750143612
-pal-44558.json::JSON::-1::1750143612::0::1::::<><>::
-::res://src/::1750149562
+::res://pals/::1750181794
+pal-10381.json::JSON::-1::1750169529::0::1::::<><>::
+pal-36905.json::JSON::-1::1750181794::0::1::::<><>::
+pal-41536.json::JSON::-1::1750155728::0::1::::<><>::
+pal-41865.json::JSON::-1::1750181788::0::1::::<><>::
+pal-47021.json::JSON::-1::1750170078::0::1::::<><>::
+pal-48914.json::JSON::-1::1750176525::0::1::::<><>::
+::res://src/::1750196456
 bg test.gd::GDScript::-1::1750144241::0::1::::<>Control<>::
-body.gd::GDScript::-1::1750107587::0::1::::<>Sprite2D<>::
+body.gd::GDScript::-1::1750155510::0::1::::<>Sprite2D<>::
 body_text.gd::GDScript::-1::1749799899::0::1::::<>RichTextLabel<>::
 camera.gd::GDScript::-1::1750065632::0::1::::<>Camera2D<>::
 color_button.gd::GDScript::-1::1749799899::0::1::::<>TextureButton<>::
 color_picker.gd::GDScript::-1::1749799899::0::1::::<>TextureButton<>::
-creation_screen.tscn::PackedScene::1653862437376581363::1750149428::0::1::::<><>::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>res://src/pal_color.gdshader
-Events.gd::GDScript::-1::1749799899::0::1::::<>Node<>::
-pal_color.gdshader::Shader::-1::1750149562::0::1::::<><>::
+creation_screen.tscn::PackedScene::1653862437376581363::1750183233::0::1::::<><>::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>res://src/pal_color.gdshader
+pal_color.gdshader::Shader::-1::1750196456::0::1::::<><>::
 pal_component.gd::GDScript::-1::1750070914::0::1::::Pal_Picker_Element<>Sprite2D<>::
-pal_creator.gd::GDScript::-1::1750149161::0::1::::<>Button<>::
-pal_creator.tscn::PackedScene::4931282305446230128::1750068179::0::1::::<><>::res://src/pal_creator.gd<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>res://src/body.gd<>uid://dxpu8x5wkkvwo::::res://src/selector.tscn
-pal_loader.gd::GDScript::-1::1750142656::0::1::::<>Node2D<>::
-pal_template.tscn::PackedScene::845688394425325528::1750149562::0::1::::<><>::uid://dqj3xvr2wor2x::::res://assets/eyes/eyes-01.png<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>res://src/body.gd<>res://src/pal_component.gd
+pal_controller.gd::GDScript::-1::1750183230::0::1::::<>CharacterBody2D<>::
+pal_creator.gd::GDScript::-1::1750181761::0::1::::<>Button<>::
+pal_loader.gd::GDScript::-1::1750181527::0::1::::<>Node2D<>::
+pal_template.tscn::PackedScene::845688394425325528::1750183233::0::1::::<><>::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>res://src/body.gd<>res://src/pal_component.gd
 part_picker.gd::GDScript::-1::1750108370::0::1::::<>Node2D<>::
-playground.tscn::PackedScene::8761338342834221003::1750149428::0::1::::<><>::res://src/pal_loader.gd<>res://src/camera.gd
-Selector_Component.tscn::PackedScene::8021844253587761902::1750147810::0::1::::<><>::res://src/selector.gd<>res://src/body_text.gd
-selector.tscn::PackedScene::2043555817287195141::1750147073::0::1::::<><>::res://src/part_picker.gd
+playground.gd::GDScript::-1::1750162300::0::1::::<>Node2D<>::
+playground.tscn::PackedScene::8761338342834221003::1750183233::0::1::::<><>::res://src/pal_loader.gd<>res://src/playground.gd<>res://src/camera.gd
 scene_creator.gd::GDScript::-1::1749799899::0::1::::<>Node2D<>::
 selector.gd::GDScript::-1::1750147307::0::1::::Selector_Component<>Control<>::
-swatch.gd::GDScript::-1::1750146582::0::1::::<>Button<>::
-swatch.tscn::PackedScene::3583814604685031540::1750146501::0::1::::<><>::res://src/swatch.gd
+selector.tscn::PackedScene::2043555817287195141::1750147073::0::1::::<><>::res://src/part_picker.gd
+Selector_Component.tscn::PackedScene::8021844253587761902::1750147810::0::1::::<><>::res://src/selector.gd<>res://src/body_text.gd
+swatch.gd::GDScript::-1::1750168726::0::1::::<>Button<>::
+swatch.tscn::PackedScene::3583814604685031540::1750181104::0::1::::<><>::res://src/swatch.gd
 ::res://src/functional_components/::1750060732

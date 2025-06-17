@@ -84,7 +84,7 @@ offset_left = 932.0
 offset_top = 257.0
 offset_right = 997.0
 offset_bottom = 322.0
-color = Color(0.8, 0, 0, 1)
+color = Color(1, 1, 1, 1)
 reference = NodePath("../../../Pal_Template/Body")
 
 [node name="Swatch5" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
@@ -93,7 +93,7 @@ offset_left = 715.0
 offset_top = 328.0
 offset_right = 780.0
 offset_bottom = 393.0
-color = Color(1, 0.517647, 0, 1)
+color = Color(0.588991, 0.294554, 0, 1)
 reference = NodePath("../../../Pal_Template/Body")
 
 [node name="Swatch6" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
@@ -152,7 +152,9 @@ eyes = NodePath("../Selectors/Eyes")
 mouth = NodePath("../Selectors/Mouth")
 
 [node name="Pal_Template" parent="." instance=ExtResource("5_r17rx")]
+position = Vector2(554, 290)
 script = null
+metadata/_edit_group_ = true
 
 [node name="Body" parent="Pal_Template" index="0"]
 material = SubResource("ShaderMaterial_2woi3")
