@@ -1,37 +1,36 @@
 extends CharacterBody2D
 
-const speed = 100
-
 @onready var camera: Camera2D = $Camera
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent
+
+const SPEED = 100
 var target := Vector2i(100,100)
 
 func _ready() -> void:
+	new_destination()
 	#scale.x = -1 # somehow bad code, figure out how to flip properly
-	make_path()
 
 func _physics_process(delta: float) -> void:
-	var dir = to_local(nav_agent.get_next_path_position()).normalized()
-	velocity = dir * speed
-	#if velocity.x < 0:
-		#scale.x = -1
-	#else:
-		#scale.x = 1
+	var next_pos = nav_agent.get_next_path_position()
+	var dir = next_pos - global_position
+	if dir.length() > 0:
+		dir = dir.normalized()
+	else:
+		dir = Vector2.ZERO
+	velocity = dir * SPEED
 	move_and_slide()
-	#print_debug(velocity)
-
-func make_path() -> void:
-	nav_agent.target_position = target
-
-func _on_timer_timeout():
-	make_path()
 
 func _destination_reached():
+	$Timers/Cooldown_Navigation.start()
+	set_physics_process(false)
+	print_debug("destination reached")
+
+func _cooldown_navigation_over():
 	new_destination()
+	set_physics_process(true)
 
 func new_destination():
-	target = Vector2i(
-		randi_range(0, 100),
-		randi_range(0, 100))
-	print_debug("FINISHED")
-	make_path()
+	nav_agent.target_position = Vector2i(
+		randi_range(200, 800),
+		randi_range(200, 800))
+	#print_debug(name + " set a new path. Now walking to: " + str(nav_agent.target_position))

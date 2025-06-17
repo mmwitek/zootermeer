@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://mbwmneovf161"]
+[gd_scene load_steps=9 format=3 uid="uid://mbwmneovf161"]
 
 [ext_resource type="Script" path="res://src/pal_controller.gd" id="1_7lk6v"]
 [ext_resource type="Texture2D" uid="uid://uhx6m5yhqq8r" path="res://assets/eyes/Eyes 1.png" id="2_3soap"]
@@ -11,9 +11,6 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_03ljg"]
 shader = ExtResource("2_7fcxe")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qd66i"]
-radius = 165.012
 
 [node name="Pal_Template" type="CharacterBody2D"]
 script = ExtResource("1_7lk6v")
@@ -60,16 +57,14 @@ script = ExtResource("6_sjftw")
 [node name="Timers" type="Node" parent="."]
 
 [node name="Cooldown_Navigation" type="Timer" parent="Timers"]
-wait_time = 10.0
-autostart = true
+wait_time = 4.0
+one_shot = true
 
 [node name="Cooldown_Interaction" type="Timer" parent="Timers"]
 
 [node name="NavigationAgent" type="NavigationAgent2D" parent="."]
+path_max_distance = 1000.0
+debug_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.000396729, -0.000366211)
-shape = SubResource("CircleShape2D_qd66i")
-
-[connection signal="timeout" from="Timers/Cooldown_Navigation" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timers/Cooldown_Navigation" to="." method="_cooldown_navigation_over"]
 [connection signal="target_reached" from="NavigationAgent" to="." method="_destination_reached"]

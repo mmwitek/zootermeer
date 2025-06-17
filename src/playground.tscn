@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw3b7yuqrqc6v"]
+[gd_scene load_steps=6 format=3 uid="uid://dw3b7yuqrqc6v"]
 
 [ext_resource type="Script" path="res://src/pal_loader.gd" id="1_l47au"]
 [ext_resource type="Script" path="res://src/playground.gd" id="1_nbom4"]
 [ext_resource type="Script" path="res://src/camera.gd" id="2_4ic1i"]
+[ext_resource type="PackedScene" uid="uid://mbwmneovf161" path="res://src/pal_template.tscn" id="3_t5i1j"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_dq1mw"]
 vertices = PackedVector2Array(1142, 638, 10, 638, 10, 10, 1142, 10)
@@ -18,10 +19,14 @@ offset_top = -5719.0
 offset_right = 6850.0
 offset_bottom = 6565.0
 
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2(576, 324)
-zoom = Vector2(0.1, 0.1)
-script = ExtResource("2_4ic1i")
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-3987, -2305)
+scale = Vector2(8, 8)
+navigation_polygon = SubResource("NavigationPolygon_dq1mw")
+
+[node name="Pal_Template" parent="." instance=ExtResource("3_t5i1j")]
+position = Vector2(581, 338)
+metadata/_edit_group_ = true
 
 [node name="Pal_Manager" type="Node2D" parent="."]
 script = ExtResource("1_l47au")
@@ -35,5 +40,10 @@ bbcode_enabled = true
 text = "[b][font_size=48][color=black]PLAYGROUND"
 fit_content = true
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_dq1mw")
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("2_4ic1i")
+
+[connection signal="navigation_finished" from="Pal_Template/NavigationAgent" to="Pal_Template" method="_destination_reached"]
+
+[editable path="Pal_Template"]

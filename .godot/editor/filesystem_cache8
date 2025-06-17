@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1750197347
+::res://::1750197609
 export_presets.cfg::TextFile::-1::1749799899::0::1::::<><>::
 icon.png::CompressedTexture2D::4173421636637488431::1750197347::1750197348::1::::<><>::
 ::res://assets/::1749799899
@@ -31,23 +31,23 @@ pal-41536.json::JSON::-1::1750155728::0::1::::<><>::
 pal-41865.json::JSON::-1::1750181788::0::1::::<><>::
 pal-47021.json::JSON::-1::1750170078::0::1::::<><>::
 pal-48914.json::JSON::-1::1750176525::0::1::::<><>::
-::res://src/::1750196456
+::res://src/::1750197601
 bg test.gd::GDScript::-1::1750144241::0::1::::<>Control<>::
 body.gd::GDScript::-1::1750155510::0::1::::<>Sprite2D<>::
 body_text.gd::GDScript::-1::1749799899::0::1::::<>RichTextLabel<>::
 camera.gd::GDScript::-1::1750065632::0::1::::<>Camera2D<>::
 color_button.gd::GDScript::-1::1749799899::0::1::::<>TextureButton<>::
 color_picker.gd::GDScript::-1::1749799899::0::1::::<>TextureButton<>::
-creation_screen.tscn::PackedScene::1653862437376581363::1750183233::0::1::::<><>::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>res://src/pal_color.gdshader
-pal_color.gdshader::Shader::-1::1750196456::0::1::::<><>::
+creation_screen.tscn::PackedScene::1653862437376581363::1750197527::0::1::::<><>::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>res://src/pal_color.gdshader
+pal_color.gdshader::Shader::-1::1750197601::0::1::::<><>::
 pal_component.gd::GDScript::-1::1750070914::0::1::::Pal_Picker_Element<>Sprite2D<>::
-pal_controller.gd::GDScript::-1::1750183230::0::1::::<>CharacterBody2D<>::
+pal_controller.gd::GDScript::-1::1750197420::0::1::::<>CharacterBody2D<>::
 pal_creator.gd::GDScript::-1::1750181761::0::1::::<>Button<>::
 pal_loader.gd::GDScript::-1::1750181527::0::1::::<>Node2D<>::
-pal_template.tscn::PackedScene::845688394425325528::1750183233::0::1::::<><>::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>res://src/body.gd<>res://src/pal_component.gd
+pal_template.tscn::PackedScene::845688394425325528::1750197527::0::1::::<><>::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>res://src/body.gd<>res://src/pal_component.gd
 part_picker.gd::GDScript::-1::1750108370::0::1::::<>Node2D<>::
 playground.gd::GDScript::-1::1750162300::0::1::::<>Node2D<>::
-playground.tscn::PackedScene::8761338342834221003::1750183233::0::1::::<><>::res://src/pal_loader.gd<>res://src/playground.gd<>res://src/camera.gd
+playground.tscn::PackedScene::8761338342834221003::1750197600::0::1::::<><>::res://src/pal_loader.gd<>res://src/playground.gd<>res://src/camera.gd
 scene_creator.gd::GDScript::-1::1749799899::0::1::::<>Node2D<>::
 selector.gd::GDScript::-1::1750147307::0::1::::Selector_Component<>Control<>::
 selector.tscn::PackedScene::2043555817287195141::1750147073::0::1::::<><>::res://src/part_picker.gd
