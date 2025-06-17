@@ -1,20 +1,28 @@
-extends Node2D
+extends Button
 
 var FOLDER := "res://pals/"
 
-func _on_create_button_press() -> void:
+@export_group("Pal Parts")
+@export var body  : Node2D
+@export var eyes  : Node2D
+@export var mouth : Node2D
+@export var head  : Node2D
+@export var drip  : Node2D
+@export var tail  : Node2D
+
+func _pressed() -> void:
 	var pal_json = create_json()
 	save_pal(pal_json)
 	print_debug("Pal saved successfully: " + pal_json)
 	
 func create_json() -> String:
 	var dict = {
-		"param_body"  : $Body.color,
-		"param_eyes"  : $Eyes.folder_index,
-		"param_mouth" : $Mouth.folder_index,
-		"param_head"  : $Head.folder_index,
-		"param_drip"  : $Drip.folder_index,
-		"param_tail"  : $Tail.folder_index
+		"param_body"  : body.color,
+		"param_eyes"  : eyes.folder_index,
+		"param_mouth" : mouth.folder_index,
+		"param_head"  : head.folder_index,
+		"param_drip"  : drip.folder_index,
+		"param_tail"  : tail.folder_index
 	}
 	return JSON.stringify(dict)
 

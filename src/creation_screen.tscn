@@ -1,0 +1,162 @@
+[gd_scene load_steps=8 format=3 uid="uid://xte4w4bqn4m6"]
+
+[ext_resource type="Script" path="res://src/bg test.gd" id="1_pms4b"]
+[ext_resource type="PackedScene" uid="uid://dmj3uq5o2btfa" path="res://src/Selector_Component.tscn" id="3_6omjb"]
+[ext_resource type="PackedScene" uid="uid://brca5x2bu480w" path="res://src/swatch.tscn" id="4_1ssms"]
+[ext_resource type="Script" path="res://src/pal_creator.gd" id="4_77hjf"]
+[ext_resource type="PackedScene" uid="uid://mbwmneovf161" path="res://src/pal_template.tscn" id="5_r17rx"]
+[ext_resource type="Shader" path="res://src/pal_color.gdshader" id="6_rjku4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2woi3"]
+shader = ExtResource("6_rjku4")
+shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
+
+[node name="Character Creator" type="Node2D"]
+
+[node name="User Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1148.0
+offset_bottom = 648.0
+
+[node name="BG" type="ColorRect" parent="User Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.321569, 1, 1)
+
+[node name="Repeating Pattern Test" type="Control" parent="User Interface"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pms4b")
+
+[node name="Create_Pal_Text" type="RichTextLabel" parent="User Interface"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 35.0
+offset_right = 714.0
+offset_bottom = 81.0
+bbcode_enabled = true
+text = "[font_size=24][b][wave amp=40.0 freq=2 connected=1]Create your pal"
+fit_content = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Swatches" type="Control" parent="User Interface"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Swatch1" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 714.0
+offset_top = 257.0
+offset_right = 779.0
+offset_bottom = 322.0
+color = Color(0.792768, 0.244661, 1, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch2" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 788.0
+offset_top = 257.0
+offset_right = 853.0
+offset_bottom = 322.0
+color = Color(0, 0.376471, 1, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch3" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 861.0
+offset_top = 257.0
+offset_right = 926.0
+offset_bottom = 322.0
+color = Color(0, 0.85098, 0, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch4" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 932.0
+offset_top = 257.0
+offset_right = 997.0
+offset_bottom = 322.0
+color = Color(0.8, 0, 0, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch5" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 715.0
+offset_top = 328.0
+offset_right = 780.0
+offset_bottom = 393.0
+color = Color(1, 0.517647, 0, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch6" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 788.0
+offset_top = 328.0
+offset_right = 853.0
+offset_bottom = 393.0
+color = Color(0.577411, 0.419256, 0.990678, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch7" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 861.0
+offset_top = 328.0
+offset_right = 926.0
+offset_bottom = 393.0
+color = Color(0.913725, 0.341176, 0.360784, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Swatch8" parent="User Interface/Swatches" node_paths=PackedStringArray("reference") instance=ExtResource("4_1ssms")]
+layout_mode = 2
+offset_left = 933.0
+offset_top = 328.0
+offset_right = 998.0
+offset_bottom = 393.0
+color = Color(6.257e-06, 0.783243, 0.722445, 1)
+reference = NodePath("../../../Pal_Template/Body")
+
+[node name="Selectors" type="VBoxContainer" parent="User Interface"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 236.0
+offset_right = 382.0
+offset_bottom = 314.0
+theme_override_constants/separation = 16
+
+[node name="Eyes" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
+layout_mode = 2
+reference = NodePath("../../../Pal_Template/Eyes")
+
+[node name="Mouth" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
+layout_mode = 2
+reference = NodePath("../../../Pal_Template/Mouth")
+
+[node name="Button_Submit" type="Button" parent="User Interface" node_paths=PackedStringArray("body", "eyes", "mouth", "drip", "tail")]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 529.0
+offset_right = 677.0
+offset_bottom = 560.0
+text = "ASSIGN LIFE TO THIS CREATURE"
+script = ExtResource("4_77hjf")
+body = NodePath("../../Pal_Template/Body")
+eyes = NodePath("../../Pal_Template/Eyes")
+mouth = NodePath("../../Pal_Template/Mouth")
+drip = NodePath("../../Pal_Template/Drip")
+tail = NodePath("../../Pal_Template/Tail")
+
+[node name="Pal_Template" parent="." instance=ExtResource("5_r17rx")]
+script = null
+
+[node name="Body" parent="Pal_Template" index="0"]
+material = SubResource("ShaderMaterial_2woi3")
+
+[editable path="Pal_Template"]

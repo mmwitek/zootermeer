@@ -3,6 +3,7 @@ extends Node2D
 var PAL = "res://pals/pal-44558.json"
 var FOLDER: String = "res://assets/"
 var scene = preload("res://src/pal_template.tscn")
+
 var pal_scene
 
 func _ready() -> void:
@@ -40,7 +41,6 @@ func set_pal_parameters(pal: Node2D, color: Color, t_head: int, t_eyes: int, t_m
 	pal.get_node("Mouth").put_texture(t_mouth)
 	#pal.get_node("Drip").put_texture(t_drip)
 	#pal.get_node("Tail").put_texture(t_tail)
-	return
 
 func extract_parameters_from_json():
 	pass

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmj3uq5o2btfa"]
+
+[ext_resource type="Script" path="res://src/selector.gd" id="1_knji2"]
+[ext_resource type="Script" path="res://src/body_text.gd" id="2_0rjpp"]
+
+[node name="Eyes" type="HBoxContainer"]
+offset_left = -141.0
+offset_top = -91.0
+offset_right = 146.0
+offset_bottom = 93.0
+theme_override_constants/separation = 20
+script = ExtResource("1_knji2")
+
+[node name="bPrevious" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/outline_size = 0
+text = "<"
+
+[node name="tBody" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "[p align=center]Selector"
+fit_content = true
+scroll_active = false
+script = ExtResource("2_0rjpp")
+
+[node name="bNext" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/outline_size = 0
+text = ">"
+
+[connection signal="button_up" from="bPrevious" to="." method="_on_click_previous"]
+[connection signal="button_up" from="bNext" to="." method="_on_click_next"]

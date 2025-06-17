@@ -15,3 +15,9 @@ res://src/eyes.gd
 res://src/body.gd
 res://src/pal_component.gd
 res://src/selector.gd
+res://src/bg test.gd
+res://pals/pal-44558.json
+res://src/creation_screen.tscn
+res://src/swatch.tscn
+res://src/swatch.gd
+res://src/Selector_Component.tscn
