@@ -1,50 +1,39 @@
 [gd_scene load_steps=9 format=3 uid="uid://mbwmneovf161"]
 
-[ext_resource type="Texture2D" uid="uid://dqj3xvr2wor2x" path="res://assets/eyes/eyes-01.png" id="2_3soap"]
+[ext_resource type="Script" path="res://src/pal_controller.gd" id="1_7lk6v"]
+[ext_resource type="Texture2D" path="res://assets/eyes/eyes-01.png" id="2_3soap"]
 [ext_resource type="Shader" path="res://src/pal_color.gdshader" id="2_7fcxe"]
 [ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="3_7la7e"]
 [ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="3_878gs"]
 [ext_resource type="Script" path="res://src/body.gd" id="4_rmurh"]
 [ext_resource type="Script" path="res://src/pal_component.gd" id="6_sjftw"]
 
-[sub_resource type="GDScript" id="GDScript_4fk2g"]
-script/source = "extends Node2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_03ljg"]
 shader = ExtResource("2_7fcxe")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
 
-[node name="Pal_Template" type="Node2D"]
-script = SubResource("GDScript_4fk2g")
+[node name="Pal_Template" type="CharacterBody2D"]
+script = ExtResource("1_7lk6v")
 
 [node name="Body" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_03ljg")
-position = Vector2(544, 244)
+position = Vector2(604, 265)
 scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("3_7la7e")
 script = ExtResource("4_rmurh")
 color = Color(0, 0.62091, 0.759736, 1)
 
 [node name="Eyes" type="Sprite2D" parent="."]
-position = Vector2(534, 163)
+position = Vector2(594, 184)
 scale = Vector2(0.34, 0.34)
 texture = ExtResource("2_3soap")
 script = ExtResource("6_sjftw")
 FOLDER = "res://assets/eyes"
 
 [node name="Mouth" type="Sprite2D" parent="."]
-position = Vector2(533, 183)
-scale = Vector2(-0.0217284, 0.0217284)
+position = Vector2(593, 204)
+rotation = -3.14159
+scale = Vector2(0.0217284, -0.0217284)
 texture = ExtResource("3_878gs")
 script = ExtResource("6_sjftw")
 FOLDER = "res://assets/mouth"
@@ -52,13 +41,27 @@ FOLDER = "res://assets/mouth"
 [node name="Drip" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(533, 183)
-scale = Vector2(-0.0217284, 0.0217284)
+rotation = -3.14159
+scale = Vector2(0.0217284, -0.0217284)
 texture = ExtResource("3_878gs")
 script = ExtResource("6_sjftw")
 
 [node name="Tail" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(533, 183)
-scale = Vector2(-0.0217284, 0.0217284)
+rotation = -3.14159
+scale = Vector2(0.0217284, -0.0217284)
 texture = ExtResource("3_878gs")
 script = ExtResource("6_sjftw")
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="Cooldown_Navigation" type="Timer" parent="Timers"]
+wait_time = 0.5
+autostart = true
+
+[node name="NavigationAgent" type="NavigationAgent2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="timeout" from="Timers/Cooldown_Navigation" to="." method="_on_timer_timeout"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-var PAL = "res://pals/pal-44558.json"
+var PAL = "res://pals/pal-41536.json"
 var FOLDER: String = "res://assets/"
 var scene = preload("res://src/pal_template.tscn")
 
@@ -11,15 +11,15 @@ func _ready() -> void:
 
 func add_pal_from_json(json_string: String):
 	var pal_values = load_json_file(PAL)
-	print_debug(pal_values["param_body"])
 	pal_scene = scene.instantiate()
 	add_child(pal_scene)
+	print_debug(pal_values["param_body"])
 	set_pal_parameters(
 		pal_scene, # referenced scene
-		Color.BLUE_VIOLET, # body color
+		Color.ORANGE_RED, #pal_values["param_body"], # body color # TODO: Figure out why the color isn't saved, exporting to col gives a black value in RGB
 		0, # head
 		pal_values["param_eyes"], # eyes
-		1, # mouth
+		pal_values["param_mouth"], # mouth
 		0, # drip
 		0  # tail
 		)

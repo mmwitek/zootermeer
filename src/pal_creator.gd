@@ -3,12 +3,12 @@ extends Button
 var FOLDER := "res://pals/"
 
 @export_group("Pal Parts")
-@export var body  : Node2D
-@export var eyes  : Node2D
-@export var mouth : Node2D
-@export var head  : Node2D
-@export var drip  : Node2D
-@export var tail  : Node2D
+@export var body  : Sprite2D
+@export var eyes  : Selector_Component
+@export var mouth : Selector_Component
+@export var head  : Selector_Component
+@export var drip  : Selector_Component
+@export var tail  : Selector_Component
 
 func _pressed() -> void:
 	var pal_json = create_json()
@@ -20,9 +20,9 @@ func create_json() -> String:
 		"param_body"  : body.color,
 		"param_eyes"  : eyes.folder_index,
 		"param_mouth" : mouth.folder_index,
-		"param_head"  : head.folder_index,
-		"param_drip"  : drip.folder_index,
-		"param_tail"  : tail.folder_index
+		#"param_head"  : head.folder_index,
+		#"param_drip"  : drip.folder_index,
+		#"param_tail"  : tail.folder_index
 	}
 	return JSON.stringify(dict)
 

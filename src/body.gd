@@ -13,3 +13,4 @@ func update_color(p_color: Color):
 	shader_material.shader = load("res://src/pal_color.gdshader")
 	shader_material.set_shader_parameter("modulate_color", p_color)
 	material = shader_material
+	color = p_color
