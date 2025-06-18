@@ -62,15 +62,13 @@ offset_bottom = 569.0
 theme_override_constants/separation = 16
 metadata/_edit_group_ = true
 
-[node name="Eyes" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
+[node name="Eyes" parent="User Interface/Selectors" instance=ExtResource("3_6omjb")]
 layout_mode = 2
-reference = NodePath("../../../Pal_Template/Eyes")
 
-[node name="Mouth" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
+[node name="Mouth" parent="User Interface/Selectors" instance=ExtResource("3_6omjb")]
 layout_mode = 2
-reference = NodePath("../../../Pal_Template/Mouth")
 
-[node name="Button_Submit" type="Button" parent="User Interface" node_paths=PackedStringArray("body", "eyes", "mouth")]
+[node name="Button_Submit" type="Button" parent="User Interface" node_paths=PackedStringArray("pal", "body", "eyes", "mouth")]
 layout_mode = 0
 offset_left = 865.0
 offset_top = 952.0
@@ -78,6 +76,7 @@ offset_right = 1115.0
 offset_bottom = 983.0
 text = "ASSIGN LIFE TO THIS CREATURE"
 script = ExtResource("4_77hjf")
+pal = NodePath("../../Pal_Template")
 body = NodePath("../../Pal_Template/Body")
 eyes = NodePath("../Selectors/Eyes")
 mouth = NodePath("../Selectors/Mouth")
@@ -174,7 +173,7 @@ reference = NodePath("../../../Pal_Template/Body")
 metadata/_edit_use_anchors_ = true
 
 [node name="Pal_Template" parent="." instance=ExtResource("5_r17rx")]
-position = Vector2(993, 555)
+position = Vector2(984, 837)
 scale = Vector2(2, 2)
 script = null
 metadata/_edit_group_ = true

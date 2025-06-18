@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://mbwmneovf161"]
+[gd_scene load_steps=12 format=3 uid="uid://mbwmneovf161"]
 
 [ext_resource type="Script" uid="uid://djh5c5bgvyjoh" path="res://src/pal_controller.gd" id="1_7lk6v"]
 [ext_resource type="Texture2D" uid="uid://uhx6m5yhqq8r" path="res://assets/eyes/Eyes 1.png" id="2_3soap"]
 [ext_resource type="Shader" uid="uid://bd1k3w6mq66qt" path="res://src/pal_color.gdshader" id="2_7fcxe"]
 [ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="3_7la7e"]
-[ext_resource type="Texture2D" uid="uid://cqca36hscyobo" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="3_878gs"]
+[ext_resource type="Texture2D" path="res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png" id="3_878gs"]
 [ext_resource type="Script" uid="uid://cmyymvsrcqo6n" path="res://src/body.gd" id="4_rmurh"]
+[ext_resource type="Texture2D" uid="uid://xwucn0wjglf2" path="res://assets/heads/HS 3 - Dino.png" id="5_qcvaf"]
 [ext_resource type="Script" uid="uid://cu2omnyed3ixm" path="res://src/pal_component.gd" id="6_sjftw"]
 [ext_resource type="Texture2D" uid="uid://d0o7mt8pqiowc" path="res://assets/Chat Bubble Icon.png" id="8_0megj"]
 
@@ -14,29 +15,39 @@ shader = ExtResource("2_7fcxe")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xsgls"]
-radius = 162.0
-height = 332.0
+radius = 108.0
+height = 340.0
 
 [node name="Pal_Template" type="CharacterBody2D"]
 script = ExtResource("1_7lk6v")
 
 [node name="Body" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_03ljg")
-position = Vector2(-5.00034, 0.999664)
+position = Vector2(-4.00034, -131)
 scale = Vector2(0.249376, 0.249376)
 texture = ExtResource("3_7la7e")
 script = ExtResource("4_rmurh")
 color = Color(0, 0.62091, 0.759736, 1)
 
-[node name="Eyes" type="Sprite2D" parent="."]
-position = Vector2(-15.0003, -80.0003)
-scale = Vector2(0.34, 0.34)
+[node name="Head" type="Node2D" parent="."]
+position = Vector2(1, -132)
+
+[node name="Head" type="Sprite2D" parent="Head"]
+position = Vector2(-8.0003, -103)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_qcvaf")
+script = ExtResource("6_sjftw")
+FOLDER = "res://assets/heads"
+
+[node name="Eyes" type="Sprite2D" parent="Head"]
+position = Vector2(-20.3003, -100)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_3soap")
 script = ExtResource("6_sjftw")
 FOLDER = "res://assets/eyes"
 
-[node name="Mouth" type="Sprite2D" parent="."]
-position = Vector2(-16.0003, -60.0003)
+[node name="Mouth" type="Sprite2D" parent="Head"]
+position = Vector2(-25.0004, -48.0004)
 rotation = -3.14159
 scale = Vector2(0.0217284, -0.0217284)
 texture = ExtResource("3_878gs")
@@ -98,9 +109,10 @@ scroll_active = false
 metadata/_edit_use_anchors_ = true
 
 [node name="Interaction_Area" type="Area2D" parent="."]
+position = Vector2(1, -132)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_Area"]
-position = Vector2(0, 2)
+position = Vector2(0, -18)
 shape = SubResource("CapsuleShape2D_xsgls")
 
 [connection signal="timeout" from="Timers/Cooldown_Navigation" to="." method="_cooldown_navigation_over"]

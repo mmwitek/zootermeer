@@ -5,9 +5,13 @@ var FOLDER: String = "res://assets/"
 var PAL_FOLDER: String = "res://pals/"
 var scene = preload("res://src/pal_template.tscn")
 
+# --- #
+
 func _ready() -> void:
 	var dir = DirAccess.open(PAL_FOLDER)
 	var textures = dir.get_files()
+	
+	#return
 	
 	for i in textures.size(): # load all pals in folder
 		add_pal_from_json(PAL_FOLDER + textures[i])
@@ -30,6 +34,7 @@ func add_pal_from_json(json_string: String):
 		0  # tail
 		)
 
+
 func load_json_file(load_path: String):
 	var file_access := FileAccess.open(load_path, FileAccess.READ)
 	if not file_access:
@@ -39,14 +44,12 @@ func load_json_file(load_path: String):
 	file_access.close()
 	return JSON.parse_string(output)
 
+
 # sets textures and sprites for loaded pal
 func set_pal_parameters(pal: Node2D, color: Color, t_head: int, t_eyes: int, t_mouth: int, t_drip: int, t_tail: int):
 	pal.get_node("Body").update_color(color)
 	#pal.get_node("Head").put_texture(t_head)
-	pal.get_node("Eyes").put_texture(t_eyes)
-	pal.get_node("Mouth").put_texture(t_mouth)
+	pal.get_node("Head").get_node("Eyes").put_texture(t_eyes)
+	pal.get_node("Head").get_node("Mouth").put_texture(t_mouth)
 	#pal.get_node("Drip").put_texture(t_drip)
 	#pal.get_node("Tail").put_texture(t_tail)
-
-func extract_parameters_from_json():
-	pass

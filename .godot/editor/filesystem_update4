@@ -8,3 +8,5 @@ res://src/pal_color.gdshader
 res://src/pal_controller.gd
 res://src/pal_loader.gd
 res://messages.gd
+res://src/pal_component.gd
+res://src/pal_creator.gd

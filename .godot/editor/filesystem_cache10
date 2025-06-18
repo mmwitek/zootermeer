@@ -1,7 +1,9 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1750244718
+::res://::1750255278
 export_presets.cfg::TextFile/TextFile::-1::1749799899::0::1::::<><><>0<>0<><>::
-::res://assets/::1750244718
+messages.gd::GDScript::3851090786576623726::1750254794::0::1::::<>Node<><>0<>0<><>::
+README.md::TextFile::-1::1750254159::0::1::::<><><>0<>0<><>::
+::res://assets/::1750255274
 Chat Bubble Icon.png::CompressedTexture2D/CompressedTexture2D::8944849853507777798::1750243245::1750244148::1::::<><><>0<>0<>8f81d226fce7a90ea94b5861b96721e9<>res://.godot/imported/Chat Bubble Icon.png-91ce59c18dc382c51ebade5428f6f2d8.ctex::
 icon.png::CompressedTexture2D::4173421636637488431::1750197347::1750244718::1::::<><><>0<>0<>7c46e3b69544e60f5521169b3a47a6a9<>res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex::
 Windows XP Bliss.jpg::CompressedTexture2D::8571864747729459259::1750238563::1750244720::1::::<><><>0<>0<>12b57e1116cfa1c2e0fb1c9e5ff4aaaa<>res://.godot/imported/Windows XP Bliss.jpg-4e2803e47b93ff14410758c7efa63212.ctex::
@@ -22,15 +24,32 @@ Eyes 5.png::CompressedTexture2D/CompressedTexture2D::2120194612836532466::174973
 Eyes 6.png::CompressedTexture2D/CompressedTexture2D::1411269701082977612::1749733306::1750244148::1::::<><><>0<>0<>67a10f457383c8c759bd7e576376d48d<>res://.godot/imported/Eyes 6.png-7f74a4438dae6aeb23fb93b0bb38e050.ctex::
 Eyes 7.png::CompressedTexture2D/CompressedTexture2D::5084321674185119957::1749804254::1750244148::1::::<><><>0<>0<>e2de0c6918df810eb60a47ed12acfdc9<>res://.godot/imported/Eyes 7.png-ba89a42d8b5394546e6af21633e7e3aa.ctex::
 Eyes 8.png::CompressedTexture2D/CompressedTexture2D::4989051639214430112::1749804282::1750244148::1::::<><><>0<>0<>8c89b5040f0f342a2ce2056ada7e4cf4<>res://.godot/imported/Eyes 8.png-f4c0cf01b4b7d55683c134bc915582d8.ctex::
-::res://assets/mouth/::1750244149
-1fdc74f737b34d88ecacc7483268721f6b903879.png::CompressedTexture2D/CompressedTexture2D::5900043263191132104::1749799899::1750244149::1::::<><><>0<>0<>4f1fcd91108476c0675ec2886215f5e1<>res://.godot/imported/1fdc74f737b34d88ecacc7483268721f6b903879.png-7e791eb070aec62c45633fe78aae8805.ctex::
-511d8647dbdc06fa3a1ddb6ccf7ccaabc72f1dab.png::CompressedTexture2D/CompressedTexture2D::3382957600769103484::1749799899::1750244149::1::::<><><>0<>0<>259e1f5ed3aee6171c1e1559cfb9adf6<>res://.godot/imported/511d8647dbdc06fa3a1ddb6ccf7ccaabc72f1dab.png-776ebbcdd09f063332a33048dc5f2a63.ctex::
-4395a330229a03909465f1bfcac071a9bf6320dc.png::CompressedTexture2D/CompressedTexture2D::3069057020912331980::1749799899::1750244148::1::::<><><>0<>0<>56e963902ffecfd37407f03c9ac43230<>res://.godot/imported/4395a330229a03909465f1bfcac071a9bf6320dc.png-e6429498908bd898c7028eb26ac5a9d8.ctex::
-::res://pals/::1750240066
+::res://assets/heads/::1750255056
+HS 1 - Cat.png::CompressedTexture2D::7660192669279663246::1749816758::1750255056::1::::<><><>0<>0<>833577bd0e159f1f03f241291aae2037<>res://.godot/imported/HS 1 - Cat.png-3ad067babbfba08feecf7d8e37a41814.ctex::
+HS 2 - Dog.png::CompressedTexture2D::3220951962483103019::1749816772::1750255056::1::::<><><>0<>0<>183158f3dc9197c664fb00c1b6ca0f5b<>res://.godot/imported/HS 2 - Dog.png-f589c8bdd56a724d47402fa9c008063e.ctex::
+HS 3 - Dino.png::CompressedTexture2D::1660978348142716337::1749819488::1750255056::1::::<><><>0<>0<>42c0d69f1fc0c67aa1bd757ebb076071<>res://.godot/imported/HS 3 - Dino.png-8f973d77a16507075645874081f4c5c1.ctex::
+HS 4 - Bunny.png::CompressedTexture2D::6752884301284307876::1749822470::1750255056::1::::<><><>0<>0<>84974a305e0f8ac31cbe26585e2b64da<>res://.godot/imported/HS 4 - Bunny.png-15fc92159fb4b1a78d5f7b2ae89ae7e8.ctex::
+HS 5 - Monkey.png::CompressedTexture2D::285078244779471846::1749823426::1750255056::1::::<><><>0<>0<>1e915221985a1d38f649179bb153eca8<>res://.godot/imported/HS 5 - Monkey.png-633b72e24b12e9e747b4a5146eff052f.ctex::
+HS 6 - Wolf.png::CompressedTexture2D::2102036846195935942::1750236214::1750255056::1::::<><><>0<>0<>d25398ebd11dccb69d0a3a73a4c92b6d<>res://.godot/imported/HS 6 - Wolf.png-8bb63161f6c4c93cb4d9bf3f635ac3a2.ctex::
+HS 7 - Cow.png::CompressedTexture2D::2454499203711409950::1750244998::1750255056::1::::<><><>0<>0<>3c31a65f61117b1d46542190e1b1d88b<>res://.godot/imported/HS 7 - Cow.png-58a2dbfceafe968d4d1e8988e465b76d.ctex::
+::res://assets/head_scenes/::1750255274
+::res://assets/mouth/::1750255749
+Duck Face.png::CompressedTexture2D::8265538287142512957::1750255494::1750255750::1::::<><><>0<>0<>053c9d6824acd6d57904d5f227714bc8<>res://.godot/imported/Duck Face.png-d22b45fd386589a7d9efc6054ce638db.ctex::
+Happy Face.png::CompressedTexture2D::3041336689171859599::1750255544::1750255750::1::::<><><>0<>0<>224918964f606286e61b62eb7d5e0f3a<>res://.godot/imported/Happy Face.png-e3c0157dba6dded2dd84e2fe4cc7080e.ctex::
+Rizz Face.png::CompressedTexture2D::6990188053219581230::1750255568::1750255750::1::::<><><>0<>0<>eedd7877ff5dad32049d859c89d5be7f<>res://.godot/imported/Rizz Face.png-136e81814b10e94a58a3f6833a600c09.ctex::
+Roblox Face.png::CompressedTexture2D::5874149472893693136::1750255462::1750255750::1::::<><><>0<>0<>1a4cabd4d97e13704090ccabc7c04f79<>res://.godot/imported/Roblox Face.png-afd53f7e267ea22ea756e44329618c08.ctex::
+Sad Face.png::CompressedTexture2D::8652775881948776288::1750255512::1750255750::1::::<><><>0<>0<>f275d8b12148ca323a493a3bbf960b2f<>res://.godot/imported/Sad Face.png-e2475d398f56be7a7362d098e2264d1d.ctex::
+Shmokeyy Face.png::CompressedTexture2D::497405080371866722::1750255588::1750255750::1::::<><><>0<>0<>631bf81668b133bc0afe7b39b8b54f9d<>res://.godot/imported/Shmokeyy Face.png-e7ba71dbee60eddb5d6cc6d92e41d473.ctex::
+Smiley Face.png::CompressedTexture2D::3601173017022642010::1750255556::1750255750::1::::<><><>0<>0<>db1c5b9e88741cd0c478a54ed5cfd503<>res://.godot/imported/Smiley Face.png-1f302cfc85cc9f186d6dd7f03a4717f8.ctex::
+Tongue Out Face.png::CompressedTexture2D::7378702090559247414::1750255604::1750255750::1::::<><><>0<>0<>ea0a6ce514c37da46e8616960cf26d56<>res://.godot/imported/Tongue Out Face.png-fcde2dd99b147392f2e12f60436c6d62.ctex::
+::res://pals/::1750251663
+pal-2932.json::JSON::-1::1750245189::0::1::::<><><>0<>0<><>::
 pal-3012.json::JSON/JSON::-1::1750238370::0::1::::<><><>0<>0<><>::
-pal-39706.json::JSON/JSON::-1::1750240061::0::1::::<><><>0<>0<><>::
-pal-68632.json::JSON/JSON::-1::1750240066::0::1::::<><><>0<>0<><>::
-::res://src/::1750244718
+pal-29322.json::JSON::-1::1750251652::0::1::::<><><>0<>0<><>::
+pal-29323.json::JSON::-1::1750251658::0::1::::<><><>0<>0<><>::
+pal-29327.json::JSON::-1::1750251663::0::1::::<><><>0<>0<><>::
+pal-29345.json::JSON::-1::1750251661::0::1::::<><><>0<>0<><>::
+::res://src/::1750255666
 bg test.gd::GDScript/GDScript::1314244234535245215::1750234962::0::1::::<>Control<><>0<>0<><>::
 body.gd::GDScript/GDScript::5666132326065832739::1750155510::0::1::::<>Sprite2D<><>0<>0<><>::
 body_text.gd::GDScript/GDScript::536455963123082134::1749799899::0::1::::<>RichTextLabel<><>0<>0<><>::
@@ -38,16 +57,16 @@ camera.gd::GDScript/GDScript::6027766196875074863::1750237964::0::1::::<>Camera2
 claw.gd::GDScript/GDScript::727405068900483519::1750242917::0::1::::<>CharacterBody2D<><>0<>0<><>::
 color_button.gd::GDScript/GDScript::4705808792874639086::1749799899::0::1::::<>TextureButton<><>0<>0<><>::
 color_picker.gd::GDScript/GDScript::3063713589662168259::1749799899::0::1::::<>TextureButton<><>0<>0<><>::
-creation_screen.tscn::PackedScene::1653862437376581363::1750244548::0::1::::<><><>0<>0<><>::uid://syvn7tpdivut::::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>uid://b0pstim22adb2::::res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>uid://bd1k3w6mq66qt::::res://src/pal_color.gdshader
-pal_color.gdshader::Shader::2651319412340255463::1750244718::0::1::::<><><>0<>0<><>::
-pal_component.gd::GDScript/GDScript::6233228626997772106::1750070914::0::1::::Pal_Picker_Element<>Sprite2D<><>0<>0<><>::
-pal_controller.gd::GDScript/GDScript::7807238947017755287::1750242523::0::1::::<>CharacterBody2D<><>0<>0<><>::
+creation_screen.tscn::PackedScene::1653862437376581363::1750255666::0::1::::<><><>0<>0<><>::uid://syvn7tpdivut::::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>uid://b0pstim22adb2::::res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>uid://bd1k3w6mq66qt::::res://src/pal_color.gdshader
+pal_color.gdshader::Shader::2651319412340255463::1750255666::0::1::::<><><>0<>0<><>::
+pal_component.gd::GDScript::6233228626997772106::1750255546::0::1::::Pal_Picker_Element<>Sprite2D<><>0<>0<><>::
+pal_controller.gd::GDScript::7807238947017755287::1750251157::0::1::::<>CharacterBody2D<><>0<>0<><>::
 pal_creator.gd::GDScript/GDScript::4173234716896091865::1750181761::0::1::::<>Button<><>0<>0<><>::
-pal_loader.gd::GDScript/GDScript::3091105103349008999::1750238433::0::1::::<>Node2D<><>0<>0<><>::
-pal_template.tscn::PackedScene::845688394425325528::1750244548::0::1::::<><><>0<>0<><>::uid://djh5c5bgvyjoh::::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>uid://bd1k3w6mq66qt::::res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>uid://cmyymvsrcqo6n::::res://src/body.gd<>uid://cu2omnyed3ixm::::res://src/pal_component.gd<>uid://d0o7mt8pqiowc::::res://assets/Chat Bubble Icon.png
+pal_loader.gd::GDScript::3091105103349008999::1750245570::0::1::::<>Node2D<><>0<>0<><>::
+pal_template.tscn::PackedScene::845688394425325528::1750255666::0::1::::<><><>0<>0<><>::uid://djh5c5bgvyjoh::::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>uid://bd1k3w6mq66qt::::res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>uid://cmyymvsrcqo6n::::res://src/body.gd<>uid://xwucn0wjglf2::::res://assets/heads/HS 3 - Dino.png<>uid://cu2omnyed3ixm::::res://src/pal_component.gd<>uid://d0o7mt8pqiowc::::res://assets/Chat Bubble Icon.png
 part_picker.gd::GDScript/GDScript::3031754570904720288::1750108370::0::1::::<>Node2D<><>0<>0<><>::
 playground.gd::GDScript/GDScript::469879928391807801::1750162300::0::1::::<>Node2D<><>0<>0<><>::
-playground.tscn::PackedScene::8761338342834221003::1750244718::0::1::::<><><>0<>0<><>::uid://bkbmbxfbf6jp4::::res://src/pal_loader.gd<>uid://gxu4a7t8odgb::::res://src/playground.gd<>uid://cr45otpq0vf2n::::res://src/camera.gd<>uid://duejmigvbkj52::::res://assets/Windows XP Bliss.jpg<>uid://kmmixa00q0ql::::res://src/claw.gd
+playground.tscn::PackedScene::8761338342834221003::1750255666::0::1::::<><><>0<>0<><>::uid://bkbmbxfbf6jp4::::res://src/pal_loader.gd<>uid://gxu4a7t8odgb::::res://src/playground.gd<>uid://cr45otpq0vf2n::::res://src/camera.gd<>uid://duejmigvbkj52::::res://assets/Windows XP Bliss.jpg<>uid://kmmixa00q0ql::::res://src/claw.gd
 scene_creator.gd::GDScript/GDScript::2394472029692213722::1749799899::0::1::::<>Node2D<><>0<>0<><>::
 selector.gd::GDScript/GDScript::3360123893853345890::1750147307::0::1::::Selector_Component<>Control<><>0<>0<><>::
 selector.tscn::PackedScene/PackedScene::2043555817287195141::1750244201::0::1::::<><><>0<>0<><>::uid://bjgus4nl45phw::::res://src/part_picker.gd

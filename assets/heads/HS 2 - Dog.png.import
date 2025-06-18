@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjyw6km0pm4se"
-path="res://.godot/imported/4395a330229a03909465f1bfcac071a9bf6320dc.png-e6429498908bd898c7028eb26ac5a9d8.ctex"
+uid="uid://bl5iuxecq28h8"
+path="res://.godot/imported/HS 2 - Dog.png-f589c8bdd56a724d47402fa9c008063e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mouth/4395a330229a03909465f1bfcac071a9bf6320dc.png"
-dest_files=["res://.godot/imported/4395a330229a03909465f1bfcac071a9bf6320dc.png-e6429498908bd898c7028eb26ac5a9d8.ctex"]
+source_file="res://assets/heads/HS 2 - Dog.png"
+dest_files=["res://.godot/imported/HS 2 - Dog.png-f589c8bdd56a724d47402fa9c008063e.ctex"]
 
 [params]
 

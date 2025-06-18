@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 	var next_pos = nav_agent.get_next_path_position()
 	var dir = (next_pos - global_position).normalized()
 	velocity = dir * SPEED
+	z_index = -position.y
 	move_and_slide()
 
 

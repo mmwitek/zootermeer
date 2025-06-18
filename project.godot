@@ -37,6 +37,8 @@ folder_colors={
 "res://assets/drip/": "orange",
 "res://assets/ears/": "orange",
 "res://assets/eyes/": "orange",
+"res://assets/head_scenes/": "yellow",
+"res://assets/heads/": "orange",
 "res://assets/mouth/": "orange",
 "res://assets/tails/": "orange",
 "res://pals/": "yellow",

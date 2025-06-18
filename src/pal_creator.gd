@@ -1,6 +1,8 @@
 extends Button
 
-var FOLDER := "res://pals/"
+var FOLDER := "res://pals"
+
+@export var pal  : Node2D
 
 @export_group("Pal Parts")
 @export var body  : Sprite2D
@@ -10,11 +12,13 @@ var FOLDER := "res://pals/"
 @export var drip  : Selector_Component
 @export var tail  : Selector_Component
 
+
 func _pressed() -> void:
 	var pal_json = create_json()
 	save_pal(pal_json)
 	print_debug("Pal saved successfully: " + pal_json)
-	
+
+
 func create_json() -> String:
 	var dict = {
 		"param_body"  : body.color,
@@ -26,6 +30,7 @@ func create_json() -> String:
 	}
 	return JSON.stringify(dict)
 
+
 func save_pal(pal_string: String):
 	var file_path = FOLDER + "pal-" + str(randi_range(1, 100000)) + ".json"
 	var file_access := FileAccess.open(file_path, FileAccess.WRITE)
@@ -34,3 +39,7 @@ func save_pal(pal_string: String):
 		return
 	file_access.store_line(pal_string)
 	file_access.close()
+
+
+func squish(): # flattens pal to be zapped up
+	pass

@@ -20,6 +20,7 @@ var msg = [
 	"It depends.",
 	"It ALWAYS depends.",
 	"Cold today huh?",
+	"Was geht ab Digga?",
 	"Did you know we are in a simulation?",
 	"Hey, did you see that star last night?",
 	"I just found a new bug to chase!",
