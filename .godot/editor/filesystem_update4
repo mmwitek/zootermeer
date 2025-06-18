@@ -1,4 +1,10 @@
-res://src/pal_template.tscn
-res://src/pal_color.gdshader
-res://src/playground.tscn
 res://src/creation_screen.tscn
+res://src/pal_template.tscn
+res://src/playground.tscn
+res://src/selector.tscn
+res://src/Selector_Component.tscn
+res://src/swatch.tscn
+res://src/pal_color.gdshader
+res://src/pal_controller.gd
+res://src/pal_loader.gd
+res://messages.gd

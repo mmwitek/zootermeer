@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dw3b7yuqrqc6v"]
 
-[ext_resource type="Script" path="res://src/pal_loader.gd" id="1_l47au"]
-[ext_resource type="Script" path="res://src/playground.gd" id="1_nbom4"]
-[ext_resource type="Script" path="res://src/camera.gd" id="2_4ic1i"]
-[ext_resource type="Texture2D" uid="uid://duejmigvbkj52" path="res://Windows XP Bliss.jpg" id="4_nk25h"]
-[ext_resource type="Script" path="res://src/claw.gd" id="5_m8ss7"]
+[ext_resource type="Script" uid="uid://bkbmbxfbf6jp4" path="res://src/pal_loader.gd" id="1_l47au"]
+[ext_resource type="Script" uid="uid://gxu4a7t8odgb" path="res://src/playground.gd" id="1_nbom4"]
+[ext_resource type="Script" uid="uid://cr45otpq0vf2n" path="res://src/camera.gd" id="2_4ic1i"]
+[ext_resource type="Texture2D" uid="uid://duejmigvbkj52" path="res://assets/Windows XP Bliss.jpg" id="4_nk25h"]
+[ext_resource type="Script" uid="uid://kmmixa00q0ql" path="res://src/claw.gd" id="5_m8ss7"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_dq1mw"]
 vertices = PackedVector2Array(625.32, 350.094, 680.328, 355.242, 680.906, 420.508, 460.148, 420.727, 460.352, 345.453, 508.289, 342.75, 556.289, 344.117, 625.32, 350.078)
@@ -32,15 +32,6 @@ navigation_polygon = SubResource("NavigationPolygon_dq1mw")
 
 [node name="Pal_Manager" type="Node2D" parent="."]
 script = ExtResource("1_l47au")
-
-[node name="Title" type="RichTextLabel" parent="."]
-offset_left = 397.0
-offset_top = 26.0
-offset_right = 736.0
-offset_bottom = 93.0
-bbcode_enabled = true
-text = "[b][font_size=48][color=black]PLAYGROUND"
-fit_content = true
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(576, 324)

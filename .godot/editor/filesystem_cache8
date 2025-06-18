@@ -1,9 +1,9 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1750243241
+::res://::1750243864
 export_presets.cfg::TextFile::-1::1749799899::0::1::::<><>::
 icon.png::CompressedTexture2D::4173421636637488431::1750197347::1750197348::1::::<><>::
 Windows XP Bliss.jpg::CompressedTexture2D::8571864747729459259::1750238563::1750238578::1::::<><>::
-::res://assets/::1750243255
+::res://assets/::1750243257
 Chat Bubble Icon.png::CompressedTexture2D::8944849853507777798::1750243245::1750243257::1::::<><>::
 ::res://assets/body/::1749823423
 body.png::CompressedTexture2D::7053990914477367596::1749799899::1749823420::1::::<><>::
@@ -30,7 +30,7 @@ Eyes 8.png::CompressedTexture2D::4989051639214430112::1749804282::1750149759::1:
 pal-3012.json::JSON::-1::1750238370::0::1::::<><>::
 pal-39706.json::JSON::-1::1750240061::0::1::::<><>::
 pal-68632.json::JSON::-1::1750240066::0::1::::<><>::
-::res://src/::1750243180
+::res://src/::1750243842
 bg test.gd::GDScript::-1::1750234962::0::1::::<>Control<>::
 body.gd::GDScript::-1::1750155510::0::1::::<>Sprite2D<>::
 body_text.gd::GDScript::-1::1749799899::0::1::::<>RichTextLabel<>::
@@ -38,16 +38,16 @@ camera.gd::GDScript::-1::1750237964::0::1::::<>Camera2D<>::
 claw.gd::GDScript::-1::1750242917::0::1::::<>CharacterBody2D<>::
 color_button.gd::GDScript::-1::1749799899::0::1::::<>TextureButton<>::
 color_picker.gd::GDScript::-1::1749799899::0::1::::<>TextureButton<>::
-creation_screen.tscn::PackedScene::1653862437376581363::1750243132::0::1::::<><>::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>res://src/pal_color.gdshader
-pal_color.gdshader::Shader::-1::1750243180::0::1::::<><>::
+creation_screen.tscn::PackedScene::1653862437376581363::1750243739::0::1::::<><>::res://src/bg test.gd<>uid://dmj3uq5o2btfa::::res://src/Selector_Component.tscn<>uid://brca5x2bu480w::::res://src/swatch.tscn<>res://src/pal_creator.gd<>uid://mbwmneovf161::::res://src/pal_template.tscn<>res://src/pal_color.gdshader
+pal_color.gdshader::Shader::-1::1750243842::0::1::::<><>::
 pal_component.gd::GDScript::-1::1750070914::0::1::::Pal_Picker_Element<>Sprite2D<>::
 pal_controller.gd::GDScript::-1::1750242523::0::1::::<>CharacterBody2D<>::
 pal_creator.gd::GDScript::-1::1750181761::0::1::::<>Button<>::
 pal_loader.gd::GDScript::-1::1750238433::0::1::::<>Node2D<>::
-pal_template.tscn::PackedScene::845688394425325528::1750243132::0::1::::<><>::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>res://src/body.gd<>res://src/pal_component.gd
+pal_template.tscn::PackedScene::845688394425325528::1750243739::0::1::::<><>::res://src/pal_controller.gd<>uid://uhx6m5yhqq8r::::res://assets/eyes/Eyes 1.png<>res://src/pal_color.gdshader<>uid://c7rag16ndy1do::::res://assets/body/body.png<>uid://cqca36hscyobo::::res://assets/mouth/1fdc74f737b34d88ecacc7483268721f6b903879.png<>res://src/body.gd<>res://src/pal_component.gd<>uid://d0o7mt8pqiowc::::res://assets/Chat Bubble Icon.png
 part_picker.gd::GDScript::-1::1750108370::0::1::::<>Node2D<>::
 playground.gd::GDScript::-1::1750162300::0::1::::<>Node2D<>::
-playground.tscn::PackedScene::8761338342834221003::1750243180::0::1::::<><>::res://src/pal_loader.gd<>res://src/playground.gd<>res://src/camera.gd<>uid://duejmigvbkj52::::res://Windows XP Bliss.jpg<>res://src/claw.gd<>uid://b0pvv6f1y8n08::::res://icon.png
+playground.tscn::PackedScene::8761338342834221003::1750243818::0::1::::<><>::res://src/pal_loader.gd<>res://src/playground.gd<>res://src/camera.gd<>uid://duejmigvbkj52::::res://Windows XP Bliss.jpg<>res://src/claw.gd
 scene_creator.gd::GDScript::-1::1749799899::0::1::::<>Node2D<>::
 selector.gd::GDScript::-1::1750147307::0::1::::Selector_Component<>Control<>::
 selector.tscn::PackedScene::2043555817287195141::1750147073::0::1::::<><>::res://src/part_picker.gd

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmj3uq5o2btfa"]
 
-[ext_resource type="Script" path="res://src/selector.gd" id="1_knji2"]
-[ext_resource type="Script" path="res://src/body_text.gd" id="2_0rjpp"]
+[ext_resource type="Script" uid="uid://bn4w0qsy4ie3k" path="res://src/selector.gd" id="1_knji2"]
+[ext_resource type="Script" uid="uid://hv4l7e5gxkig" path="res://src/body_text.gd" id="2_0rjpp"]
 
 [node name="Eyes" type="HBoxContainer"]
 offset_left = -141.0
