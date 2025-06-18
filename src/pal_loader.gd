@@ -2,19 +2,25 @@ extends Node2D
 
 var PAL = "res://pals/pal-41536.json"
 var FOLDER: String = "res://assets/"
+var PAL_FOLDER: String = "res://pals/"
 var scene = preload("res://src/pal_template.tscn")
 
-
-
 func _ready() -> void:
-	add_pal_from_json(PAL)
+	var dir = DirAccess.open(PAL_FOLDER)
+	var textures = dir.get_files()
+	
+	for i in textures.size(): # load all pals in folder
+		add_pal_from_json(PAL_FOLDER + textures[i])
+	
+
 
 func add_pal_from_json(json_string: String):
-	var pal_values = load_json_file(PAL)
+	var pal_values = load_json_file(json_string)
 	var pal_node : Node2D = scene.instantiate()
-	print_debug(pal_values["param_body"])
 	add_child(pal_node)
 	pal_node.global_position = Vector2(500,500)
+	print_debug(pal_values["param_body"])
+	#return
 	set_pal_parameters(
 		pal_node, # referenced scene
 		Color.ORANGE_RED, #pal_values["param_body"], # body color # TODO: Figure out why the color isn't saved, exporting to col gives a black value in RGB

@@ -1,7 +1,11 @@
+RichTextLabel
+Node2D
+Sprite2D
+CharacterBody2D
+CollisionShape2D
+Area2D
 Timer
 NavigationRegion2D
-CollisionShape2D
-CharacterBody2D
 NavigationAgent2D
 Node
 VBoxContainer
@@ -9,6 +13,3 @@ HBoxContainer
 Button
 Control
 ColorRect
-Node2D
-Pal_Picker_Element
-Camera2D

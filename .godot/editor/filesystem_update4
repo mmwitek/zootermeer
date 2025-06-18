@@ -1,5 +1,4 @@
-res://src/playground.tscn
-res://src/pal_color.gdshader
-res://src/creation_screen.tscn
 res://src/pal_template.tscn
-res://src/pal_controller.gd
+res://src/pal_color.gdshader
+res://src/playground.tscn
+res://src/creation_screen.tscn

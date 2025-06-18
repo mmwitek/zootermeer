@@ -5,7 +5,7 @@ const CIRCLE_COUNT_Y = 6
 
 const SPEED = Vector2(-25, -25)  # pixels per second
 const SPEED_MULT = .2
-const SIZE = 32
+const SIZE = 72
 const PIXEL_CUTOFF = 40  # pixels outside the screen before wrapping
 
 var screen_size = Vector2.ZERO
@@ -34,17 +34,15 @@ func _draw():
 func _process(delta):
 	for i in range(circles.size()):
 		circles[i] += SPEED * delta
-
 		# Wrap horizontally with PIXEL_CUTOFF margin
 		if circles[i].x < -PIXEL_CUTOFF:
 			circles[i].x += screen_size.x + 2 * PIXEL_CUTOFF
 		elif circles[i].x > screen_size.x + PIXEL_CUTOFF:
 			circles[i].x -= screen_size.x + 2 * PIXEL_CUTOFF
-
 		# Wrap vertically with PIXEL_CUTOFF margin
 		if circles[i].y < -PIXEL_CUTOFF:
 			circles[i].y += screen_size.y + 2 * PIXEL_CUTOFF
 		elif circles[i].y > screen_size.y + PIXEL_CUTOFF:
 			circles[i].y -= screen_size.y + 2 * PIXEL_CUTOFF
-
+	
 	queue_redraw()
