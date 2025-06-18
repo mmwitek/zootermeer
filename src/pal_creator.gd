@@ -14,9 +14,31 @@ var FOLDER := "res://pals"
 
 
 func _pressed() -> void:
+	save_pal_as_scene(pal)
+	return
+	
 	var pal_json = create_json()
 	save_pal(pal_json)
 	print_debug("Pal saved successfully: " + pal_json)
+
+
+func save_pal_as_scene(pal_node: Node2D):
+	var scene = PackedScene.new()
+	var result = scene.pack(pal_node)
+	
+	if result == OK:
+		var error = ResourceSaver.save(scene, "res://pals/name.tscn")
+		if error != OK:
+			push_error("An error occurred while saving the scene to disk.")
+
+
+
+
+
+
+
+
+
 
 
 func create_json() -> String:

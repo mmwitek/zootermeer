@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xte4w4bqn4m6"]
+[gd_scene load_steps=9 format=3 uid="uid://xte4w4bqn4m6"]
 
 [ext_resource type="Script" uid="uid://syvn7tpdivut" path="res://src/bg test.gd" id="1_pms4b"]
 [ext_resource type="PackedScene" uid="uid://dmj3uq5o2btfa" path="res://src/Selector_Component.tscn" id="3_6omjb"]
@@ -10,6 +10,10 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2woi3"]
 shader = ExtResource("6_rjku4")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xsgls"]
+radius = 108.0
+height = 340.0
 
 [node name="Character Creator" type="Node2D"]
 
@@ -62,19 +66,39 @@ offset_bottom = 569.0
 theme_override_constants/separation = 16
 metadata/_edit_group_ = true
 
-[node name="Eyes" parent="User Interface/Selectors" instance=ExtResource("3_6omjb")]
+[node name="Eyes" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
 layout_mode = 2
+reference = NodePath("../../../Pal_Template/Head/Eyes")
 
-[node name="Mouth" parent="User Interface/Selectors" instance=ExtResource("3_6omjb")]
+[node name="Head" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
 layout_mode = 2
+reference = NodePath("../../../Pal_Template/Head/Eyes")
+
+[node name="Mouth" parent="User Interface/Selectors" node_paths=PackedStringArray("reference") instance=ExtResource("3_6omjb")]
+layout_mode = 2
+reference = NodePath("../../../Pal_Template/Head/Mouth")
 
 [node name="Button_Submit" type="Button" parent="User Interface" node_paths=PackedStringArray("pal", "body", "eyes", "mouth")]
+visible = false
 layout_mode = 0
 offset_left = 865.0
 offset_top = 952.0
 offset_right = 1115.0
 offset_bottom = 983.0
 text = "ASSIGN LIFE TO THIS CREATURE"
+script = ExtResource("4_77hjf")
+pal = NodePath("../../Pal_Template")
+body = NodePath("../../Pal_Template/Body")
+eyes = NodePath("../Selectors/Eyes")
+mouth = NodePath("../Selectors/Mouth")
+
+[node name="Button_Submit2" type="Button" parent="User Interface" node_paths=PackedStringArray("pal", "body", "eyes", "mouth")]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 759.0
+offset_right = 629.0
+offset_bottom = 790.0
+text = "PLEASE PRESS ME"
 script = ExtResource("4_77hjf")
 pal = NodePath("../../Pal_Template")
 body = NodePath("../../Pal_Template/Body")
@@ -175,10 +199,21 @@ metadata/_edit_use_anchors_ = true
 [node name="Pal_Template" parent="." instance=ExtResource("5_r17rx")]
 position = Vector2(984, 837)
 scale = Vector2(2, 2)
-script = null
 metadata/_edit_group_ = true
 
 [node name="Body" parent="Pal_Template" index="0"]
 material = SubResource("ShaderMaterial_2woi3")
+
+[node name="Mouth" parent="Pal_Template/Head" index="2"]
+position = Vector2(-25.0004, -48.0004)
+
+[node name="Drip" parent="Pal_Template" index="2"]
+texture = null
+
+[node name="Tail" parent="Pal_Template" index="3"]
+texture = null
+
+[node name="CollisionShape2D" parent="Pal_Template/Interaction_Area" index="0"]
+shape = SubResource("CapsuleShape2D_xsgls")
 
 [editable path="Pal_Template"]

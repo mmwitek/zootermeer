@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bn4w0qsy4ie3k" path="res://src/selector.gd" id="1_knji2"]
 [ext_resource type="Script" uid="uid://hv4l7e5gxkig" path="res://src/body_text.gd" id="2_0rjpp"]
 
-[node name="Eyes" type="HBoxContainer"]
+[node name="Selector" type="HBoxContainer"]
 offset_left = -141.0
 offset_top = -91.0
 offset_right = 146.0

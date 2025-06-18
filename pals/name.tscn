@@ -1,17 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://mbwmneovf161"]
+[gd_scene load_steps=11 format=3]
 
-[ext_resource type="Script" uid="uid://djh5c5bgvyjoh" path="res://src/pal_controller.gd" id="1_7lk6v"]
-[ext_resource type="Texture2D" uid="uid://uhx6m5yhqq8r" path="res://assets/eyes/Eyes 1.png" id="2_3soap"]
-[ext_resource type="Shader" uid="uid://bd1k3w6mq66qt" path="res://src/pal_color.gdshader" id="2_7fcxe"]
-[ext_resource type="Texture2D" uid="uid://c7rag16ndy1do" path="res://assets/body/body.png" id="3_7la7e"]
-[ext_resource type="Texture2D" uid="uid://bjlimu14rofkh" path="res://assets/mouth/Happy Face.png" id="3_878gs"]
-[ext_resource type="Script" uid="uid://cmyymvsrcqo6n" path="res://src/body.gd" id="4_rmurh"]
-[ext_resource type="Texture2D" uid="uid://xwucn0wjglf2" path="res://assets/heads/HS 3 - Dino.png" id="5_qcvaf"]
-[ext_resource type="Script" uid="uid://cu2omnyed3ixm" path="res://src/pal_component.gd" id="6_sjftw"]
-[ext_resource type="Texture2D" uid="uid://d0o7mt8pqiowc" path="res://assets/Chat Bubble Icon.png" id="8_0megj"]
+[ext_resource type="Shader" path="res://src/pal_color.gdshader" id="1_ulwl0"]
+[ext_resource type="Texture2D" path="res://assets/body/body.png" id="2_rd4np"]
+[ext_resource type="Script" path="res://src/body.gd" id="3_sc2xf"]
+[ext_resource type="Texture2D" path="res://assets/heads/HS 1 - Cat.png" id="4_n7mhm"]
+[ext_resource type="Script" path="res://src/pal_component.gd" id="5_kyd66"]
+[ext_resource type="Texture2D" path="res://assets/eyes/Eyes 1.png" id="6_dyen2"]
+[ext_resource type="Texture2D" path="res://assets/mouth/Duck Face.png" id="7_0nvkw"]
+[ext_resource type="Texture2D" path="res://assets/Chat Bubble Icon.png" id="8_m3a7s"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_03ljg"]
-shader = ExtResource("2_7fcxe")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gk26n"]
+shader = ExtResource("1_ulwl0")
 shader_parameter/modulate_color = Vector4(1, 1, 0, 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xsgls"]
@@ -19,14 +18,16 @@ radius = 108.0
 height = 340.0
 
 [node name="Pal_Template" type="CharacterBody2D"]
-script = ExtResource("1_7lk6v")
+position = Vector2(984, 837)
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
 
 [node name="Body" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_03ljg")
+material = SubResource("ShaderMaterial_gk26n")
 position = Vector2(-4.00034, -131)
 scale = Vector2(0.249376, 0.249376)
-texture = ExtResource("3_7la7e")
-script = ExtResource("4_rmurh")
+texture = ExtResource("2_rd4np")
+script = ExtResource("3_sc2xf")
 color = Color(0, 0.62091, 0.759736, 1)
 
 [node name="Head" type="Node2D" parent="."]
@@ -35,23 +36,23 @@ position = Vector2(1, -132)
 [node name="Head" type="Sprite2D" parent="Head"]
 position = Vector2(-8.0003, -103)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_qcvaf")
-script = ExtResource("6_sjftw")
+texture = ExtResource("4_n7mhm")
+script = ExtResource("5_kyd66")
 FOLDER = "res://assets/heads"
 
 [node name="Eyes" type="Sprite2D" parent="Head"]
 position = Vector2(-20.3003, -100)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_3soap")
-script = ExtResource("6_sjftw")
+texture = ExtResource("6_dyen2")
+script = ExtResource("5_kyd66")
 FOLDER = "res://assets/eyes"
 
 [node name="Mouth" type="Sprite2D" parent="Head"]
-position = Vector2(-15, -58)
+position = Vector2(-25.0004, -48.0004)
 rotation = -3.14159
 scale = Vector2(0.163897, -0.163897)
-texture = ExtResource("3_878gs")
-script = ExtResource("6_sjftw")
+texture = ExtResource("7_0nvkw")
+script = ExtResource("5_kyd66")
 FOLDER = "res://assets/mouth"
 
 [node name="Drip" type="Sprite2D" parent="."]
@@ -59,16 +60,16 @@ visible = false
 position = Vector2(533, 183)
 rotation = -3.14159
 scale = Vector2(0.0217284, -0.0217284)
-texture = ExtResource("3_878gs")
-script = ExtResource("6_sjftw")
+texture = ExtResource("8_m3a7s")
+script = ExtResource("5_kyd66")
 
 [node name="Tail" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(533, 183)
 rotation = -3.14159
 scale = Vector2(0.0217284, -0.0217284)
-texture = ExtResource("3_878gs")
-script = ExtResource("6_sjftw")
+texture = ExtResource("8_m3a7s")
+script = ExtResource("5_kyd66")
 
 [node name="Timers" type="Node" parent="."]
 
@@ -90,7 +91,7 @@ position = Vector2(92, -202)
 
 [node name="ChatBubbleIcon" type="Sprite2D" parent="Dialogue"]
 scale = Vector2(0.226531, 0.226531)
-texture = ExtResource("8_0megj")
+texture = ExtResource("8_m3a7s")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Dialogue"]
 offset_left = -66.0
